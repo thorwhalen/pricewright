@@ -89,7 +89,7 @@ class TravelQuote:
         return self.time_fee + self.expenses
 
 
-def nights_needed(trip: Trip, policy: TravelPolicy = TravelPolicy()) -> tuple[bool, bool, int]:
+def nights_needed(trip: Trip, policy: TravelPolicy | None = None) -> tuple[bool, bool, int]:
     """(night before, night after, total nights) for a trip under a policy.
 
     >>> nights_needed(Trip(one_way_hours=1))
@@ -101,8 +101,10 @@ def nights_needed(trip: Trip, policy: TravelPolicy = TravelPolicy()) -> tuple[bo
     >>> nights_needed(Trip(one_way_hours=5, working_days=2))
     (True, True, 3)
     """
-    t, p = trip.one_way_hours, policy
-    before = (trip.start_hour < p.same_day_latest_start and t > p.overnight_threshold_hours) or t > p.max_travel_same_day_hours
+    t, p = trip.one_way_hours, policy or TravelPolicy()
+    before = (
+        trip.start_hour < p.same_day_latest_start and t > p.overnight_threshold_hours
+    ) or t > p.max_travel_same_day_hours
     after = t > p.max_travel_same_day_hours
     rest = int(t > p.no_work_flight_hours)
     between = max(trip.working_days - 1, 0)
@@ -128,7 +130,7 @@ def _leg_fee(hours: float, *, travel_only_day: bool, policy: TravelPolicy, rates
     return h, h * hourly * p.time_rate_fraction
 
 
-def travel_addon(trip: Trip, *, policy: TravelPolicy = TravelPolicy(), rates: Rates | None = None) -> TravelQuote:
+def travel_addon(trip: Trip, *, policy: TravelPolicy | None = None, rates: Rates | None = None) -> TravelQuote:
     """The travel line of a quote: time fee plus estimated expenses.
 
     >>> q = travel_addon(Trip(one_way_hours=3, transport_round_trip=120),
@@ -137,6 +139,7 @@ def travel_addon(trip: Trip, *, policy: TravelPolicy = TravelPolicy(), rates: Ra
     (1, 6.0, 300)
     """
     rates = rates or Rates()
+    policy = policy or TravelPolicy()
     before, after, nights = nights_needed(trip, policy)
     local = trip.one_way_hours <= policy.free_hours_each_way
     days_away = 0 if local else trip.working_days + int(before) + int(after)
@@ -146,10 +149,20 @@ def travel_addon(trip: Trip, *, policy: TravelPolicy = TravelPolicy(), rates: Ra
     hotel = trip.hotel_per_night if trip.hotel_per_night is not None else policy.hotel_per_night
     up = 1 + policy.expense_markup
     lines = [
-        Line(f"travel time, {n} traveller(s), out {out_h:g} h + back {back_h:g} h billable at {policy.time_rate_fraction:.0%}", "travel_time", n * (out_fee + back_fee), hours=n * (out_h + back_h), role=policy.role),
+        Line(
+            f"travel time, {n} traveller(s), out {out_h:g} h + back {back_h:g} h billable at {policy.time_rate_fraction:.0%}",
+            "travel_time",
+            n * (out_fee + back_fee),
+            hours=n * (out_h + back_h),
+            role=policy.role,
+        ),
         Line(f"transport, {n} x round trip (at cost)", "transport", n * trip.transport_round_trip * up),
         Line(f"hotel, {n} x {nights} night(s) at up to {hotel:g}", "hotel", n * nights * hotel * up),
-        Line(f"per diem, {n} x {days_away} day(s) at {policy.per_diem:g}", "per_diem", n * days_away * policy.per_diem * up),
+        Line(
+            f"per diem, {n} x {days_away} day(s) at {policy.per_diem:g}",
+            "per_diem",
+            n * days_away * policy.per_diem * up,
+        ),
         Line(f"local transport, {n} x {trip.local_transport:g}", "local_transport", n * trip.local_transport * up),
     ]
     if policy.per_night_fee and nights:

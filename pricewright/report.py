@@ -8,7 +8,7 @@ offering, where every euro comes from. Prose lines are never hard-wrapped.
 from __future__ import annotations
 
 import math
-from typing import Iterable
+from collections.abc import Iterable
 
 from pricewright.model import Quote
 from pricewright.spec import Card, Entry
@@ -63,7 +63,10 @@ def inputs_block(card: Card) -> str:
         [
             "## Inputs you set (defaults used until you change them)",
             "",
-            _table(("Input", "Default used", "Range seen / why"), [(r["input"], r["default"], r.get("why", "")) for r in rows]),
+            _table(
+                ("Input", "Default used", "Range seen / why"),
+                [(r["input"], r["default"], r.get("why", "")) for r in rows],
+            ),
         ]
     )
 
@@ -73,7 +76,9 @@ def summary_table(card: Card) -> str:
     rows = []
     for e in card.entries:
         q, o = e.quote, e.quote.offering
-        seats = f"{o.participants_expected}/{o.participants_cap}" if o.unit == "per_person" else (o.participants_cap or "")
+        seats = (
+            f"{o.participants_expected}/{o.participants_cap}" if o.unit == "per_person" else (o.participants_cap or "")
+        )
         rows.append(
             (
                 o.name,
@@ -89,7 +94,18 @@ def summary_table(card: Card) -> str:
             )
         )
     return _table(
-        ("Offering", "Price", "Contact h", "Seats (exp./cap)", "Hours worked", "Hours per contact h", f"{cur} per contact h", f"{cur} per person-hour", "Effective day rate (of fully priced)", "Market"),
+        (
+            "Offering",
+            "Price",
+            "Contact h",
+            "Seats (exp./cap)",
+            "Hours worked",
+            "Hours per contact h",
+            f"{cur} per contact h",
+            f"{cur} per person-hour",
+            "Effective day rate (of fully priced)",
+            "Market",
+        ),
         rows,
     )
 
@@ -127,8 +143,23 @@ def travel_block(card: Card) -> str:
     rows = []
     for name, tq in card.travel:
         t = tq.trip
-        rows.append((name, f"{t.one_way_hours:g} h", t.travellers, t.working_days, tq.nights, _m(tq.time_fee), _m(tq.expenses), f"**{_m(tq.total, cur)}**"))
-    lines.append(_table(("Scenario", "One way", "Travellers", "Days", "Nights", "Time fee", "Expenses (est.)", "Travel total"), rows))
+        rows.append(
+            (
+                name,
+                f"{t.one_way_hours:g} h",
+                t.travellers,
+                t.working_days,
+                tq.nights,
+                _m(tq.time_fee),
+                _m(tq.expenses),
+                f"**{_m(tq.total, cur)}**",
+            )
+        )
+    lines.append(
+        _table(
+            ("Scenario", "One way", "Travellers", "Days", "Nights", "Time fee", "Expenses (est.)", "Travel total"), rows
+        )
+    )
     return "\n".join(lines)
 
 
@@ -179,12 +210,17 @@ def entry_block(e: Entry) -> str:
         out += [_table(("Third-party costs (per run)", cur), [(ln.label, _m(ln.amount)) for ln in q.direct]), ""]
     out += [_waterfall(q), ""]
     facts = [
-        f"Hours worked per run: {q.hours_total:.1f}" + (f" for {o.contact_hours:g} contact hours ({q.prep_ratio:.1f} h per contact hour)" if o.contact_hours else ""),
+        f"Hours worked per run: {q.hours_total:.1f}"
+        + (
+            f" for {o.contact_hours:g} contact hours ({q.prep_ratio:.1f} h per contact hour)" if o.contact_hours else ""
+        ),
         f"Effective rate after fees and costs: {_m(q.effective_hourly)} {cur}/h, {_m(q.effective_day)} {cur}/day ({q.rate_ratio:.0%} of fully priced)",
     ]
     be = q.break_even_participants
     if be is not None:
-        facts.append(f"Seats needed at this price to pay the target day rate (plus contingency): {be:.1f} (expected {o.participants_expected}, cap {o.participants_cap})")
+        facts.append(
+            f"Seats needed at this price to pay the target day rate (plus contingency): {be:.1f} (expected {o.participants_expected}, cap {o.participants_cap})"
+        )
     if o.duration_s:
         facts.append(f"Per finished minute: {_m(q.per_finished_minute)} {cur}")
     if o.amortize_runs != 1:
@@ -197,7 +233,9 @@ def entry_block(e: Entry) -> str:
     if e.position:
         p = e.position
         unit = METRIC_LABEL.get(e.market_value, "")
-        out.append(f"- Market ({p.n} comparables, evidence-weighted, {cur}{unit}): p10 {_m(p.q10)}, median {_m(p.median)}, p90 {_m(p.q90)}; this offering is at p{p.percentile * 100:.0f}, {p.verdict}. Used: {', '.join(i for i, _ in p.used)}")
+        out.append(
+            f"- Market ({p.n} comparables, evidence-weighted, {cur}{unit}): p10 {_m(p.q10)}, median {_m(p.median)}, p90 {_m(p.q90)}; this offering is at p{p.percentile * 100:.0f}, {p.verdict}. Used: {', '.join(i for i, _ in p.used)}"
+        )
     return "\n".join(out)
 
 

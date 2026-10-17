@@ -38,9 +38,14 @@ def test_effective_rate_meets_target_without_margin_or_rounding():
 
 def test_development_is_amortised_and_participant_effort_scales():
     o = Offering(
-        "x", "training", "per_person", participants_expected=4,
+        "x",
+        "training",
+        "per_person",
+        participants_expected=4,
         efforts=(Effort("dev", 40, per="development"), Effort("fb", 1, per="participant")),
-        amortize_runs=10, contingency=0, margin=0,
+        amortize_runs=10,
+        contingency=0,
+        margin=0,
     )
     q = price(o, R, rounder=no_round)
     assert q.hours_total == pytest.approx(4 + 4)
@@ -97,7 +102,12 @@ def test_spec_round_trip_renders_markdown():
         "offerings": [
             {"id": "a", "specialty": "training", "template": "talk"},
             {"id": "b", "specialty": "training", "template": "private_workshop"},
-            {"id": "c", "specialty": "av_production", "template": "production", "params": {"style": "explainer", "seconds": 60}},
+            {
+                "id": "c",
+                "specialty": "av_production",
+                "template": "production",
+                "params": {"style": "explainer", "seconds": 60},
+            },
         ],
         "travel": {"scenarios": [{"name": "far", "trip": {"one_way_hours": 3}}]},
         "sensitivity": {"day_rates": [600, 1000]},

@@ -22,7 +22,13 @@ def _travel(args):
     from pricewright import Rates, Trip, travel_addon
 
     q = travel_addon(
-        Trip(args.one_way_hours, transport_round_trip=args.transport, working_days=args.days, travellers=args.travellers, start_hour=args.start),
+        Trip(
+            args.one_way_hours,
+            transport_round_trip=args.transport,
+            working_days=args.days,
+            travellers=args.travellers,
+            start_hour=args.start,
+        ),
         rates=Rates({"founder": args.day_rate}),
     )
     for ln in q.lines:

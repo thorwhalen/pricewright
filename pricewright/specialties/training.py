@@ -136,7 +136,12 @@ def open_workshop(
     fac = _facilitators(cap, D["facilitator_ratio"], facilitators)
     sessions = 1 if delivery == "onsite" else max(1, round(contact_hours / 3.5))
     eff = [
-        Effort("workshop development (amortised)", _d(D, "dev_ratio_workshop", dev_ratio) * contact_hours, per="development", kind="development"),
+        Effort(
+            "workshop development (amortised)",
+            _d(D, "dev_ratio_workshop", dev_ratio) * contact_hours,
+            per="development",
+            kind="development",
+        ),
         Effort(f"prep, {fac} facilitator(s)", prep_hours_per_facilitator * fac, kind="prep"),
         Effort("listing, registrations, reminders", D["open_admin_hours_per_run"], kind="admin"),
         Effort(f"delivery, {fac} facilitator(s)", contact_hours * fac),
@@ -153,7 +158,12 @@ def open_workshop(
         ]
         costs += [
             Cost("venue", _d(D, "venue_per_day", venue) * contact_hours / 7, kind="venue"),
-            Cost("lunch and coffee", D["catering_per_participant_day"] * contact_hours / 7, per="participant", kind="catering"),
+            Cost(
+                "lunch and coffee",
+                D["catering_per_participant_day"] * contact_hours / 7,
+                per="participant",
+                kind="catering",
+            ),
             Cost("printed materials", D["materials_per_participant"], per="participant"),
         ]
     else:
@@ -199,7 +209,12 @@ def private_workshop(
     fac = _facilitators(group, D["facilitator_ratio"], facilitators)
     sessions = 1 if delivery == "onsite" else max(1, round(contact_hours / 3.5))
     eff = [
-        Effort("workshop development (amortised)", _d(D, "dev_ratio_workshop", dev_ratio) * contact_hours, per="development", kind="development"),
+        Effort(
+            "workshop development (amortised)",
+            _d(D, "dev_ratio_workshop", dev_ratio) * contact_hours,
+            per="development",
+            kind="development",
+        ),
         Effort("discovery call and scoping", discovery_hours, kind="admin"),
         Effort("customisation to the client's material", customisation_hours, kind="prep"),
         Effort(f"prep, {fac} facilitator(s)", prep_hours_per_facilitator * fac, kind="prep"),
@@ -260,7 +275,12 @@ def online_course(
     live = weeks * session_hours
     contact = live + weeks * office_hours_per_week
     eff = [
-        Effort("course development (amortised)", _d(D, "dev_ratio_course", dev_ratio) * live, per="development", kind="development"),
+        Effort(
+            "course development (amortised)",
+            _d(D, "dev_ratio_course", dev_ratio) * live,
+            per="development",
+            kind="development",
+        ),
         Effort("session prep", prep_hours_per_session * weeks, kind="prep"),
         Effort("enrolment, platform, emails", D["open_admin_hours_per_run"] * 1.5, kind="admin"),
         Effort("live sessions, lead", live * lead_facilitators),
@@ -291,7 +311,10 @@ def online_course(
         contingency=D["contingency"],
         margin=D["margin"],
         family="course",
-        includes=(f"{weeks} x {session_hours:g} h live + {weeks} x {office_hours_per_week:g} h office hours", "recordings"),
+        includes=(
+            f"{weeks} x {session_hours:g} h live + {weeks} x {office_hours_per_week:g} h office hours",
+            "recordings",
+        ),
         **overrides,
     )
 
@@ -314,7 +337,12 @@ def series(
     D = {**DEFAULTS, **(defaults or {})}
     contact = sessions * session_hours
     eff = [
-        Effort("series development (amortised)", _d(D, "dev_ratio_series", dev_ratio) * contact, per="development", kind="development"),
+        Effort(
+            "series development (amortised)",
+            _d(D, "dev_ratio_series", dev_ratio) * contact,
+            per="development",
+            kind="development",
+        ),
         Effort("session prep", prep_hours_per_session * sessions, kind="prep"),
         Effort("enrolment and emails", D["open_admin_hours_per_run"] * 0.75, kind="admin"),
         Effort("live sessions", contact),
@@ -342,12 +370,22 @@ def series(
     )
 
 
-def private_series(*, sessions: int = 3, session_hours: float = 2.0, group: int = 12, name: str | None = None, defaults: dict | None = None, **overrides) -> Offering:
+def private_series(
+    *,
+    sessions: int = 3,
+    session_hours: float = 2.0,
+    group: int = 12,
+    name: str | None = None,
+    defaults: dict | None = None,
+    **overrides,
+) -> Offering:
     """The series for one client's team: no marketing or enrolment, a scoping call instead."""
     D = {**DEFAULTS, **(defaults or {})}
     contact = sessions * session_hours
     eff = [
-        Effort("series development (amortised)", D["dev_ratio_series"] * contact, per="development", kind="development"),
+        Effort(
+            "series development (amortised)", D["dev_ratio_series"] * contact, per="development", kind="development"
+        ),
         Effort("scoping call", 1.5, kind="admin"),
         Effort("customisation", 3.0, kind="prep"),
         Effort("session prep", 1.0 * sessions, kind="prep"),
@@ -428,14 +466,21 @@ def team_programme(
     eff = [e for _ in range(workshop_days) for e in day.efforts if e.per != "development"]
     eff = [Effort(f"workshop day: {e.label}", e.hours, e.role, e.per, e.kind) for e in eff]
     eff += [
-        Effort("workshop development share", D["dev_ratio_workshop"] * 7 * workshop_days, per="development", kind="development"),
+        Effort(
+            "workshop development share",
+            D["dev_ratio_workshop"] * 7 * workshop_days,
+            per="development",
+            kind="development",
+        ),
         Effort("audit: interviews and observation, 2 founders", audit_days * 7 * 2, kind="delivery"),
         Effort("audit: prep and write-up", 6.0 * audit_days, kind="prep"),
         Effort("playbook writing", playbook_days * 7, kind="production"),
         Effort("remote check-ins", 0.75 * checkins, kind="delivery"),
         Effort("day-30 review, 2 founders + prep", 1.5 * 2 + 2, kind="delivery"),
     ]
-    pm = project_management_share * sum(e.hours * (group if e.per == "participant" else 1) for e in eff if e.per != "development")
+    pm = project_management_share * sum(
+        e.hours * (group if e.per == "participant" else 1) for e in eff if e.per != "development"
+    )
     eff.append(Effort("project management", pm, kind="admin"))
     return Offering(
         name=name or "Team programme",
@@ -460,7 +505,7 @@ def private_to_seat_ratio(quotes, *, band: tuple[float, float] = (3.0, 10.0)):
 
     Above the band the private day is dear, or the open seat cheap, for the buyer who compares them.
     """
-    for fam, qs in _families(quotes).items():
+    for qs in _families(quotes).values():
         opens = [q for q in qs if q.offering.unit == "per_person"]
         privs = [q for q in qs if q.offering.unit == "per_group"]
         for o in opens:
@@ -494,7 +539,9 @@ MARKET = {
     "private_workshop": MarketRef("as_is", ("private_day",), units=("per_group",), value="unit_price"),
     "online_course": MarketRef("per_person_contact_hour", ("online_cohort", "course")),
     "series": MarketRef("per_person_contact_hour", ("series", "short_course", "online_cohort")),
-    "private_series": MarketRef("per_contact_hour", ("private_day", "half_day", "private_session"), value="per_contact_hour"),
+    "private_series": MarketRef(
+        "per_contact_hour", ("private_day", "half_day", "private_session"), value="per_contact_hour"
+    ),
     "coaching": MarketRef("per_contact_hour", ("coaching",), value="per_contact_hour"),
 }
 

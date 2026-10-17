@@ -16,8 +16,9 @@ Vocabulary:
 
 from __future__ import annotations
 
+from collections.abc import Mapping
 from dataclasses import dataclass, field, replace
-from typing import Literal, Mapping
+from typing import Literal
 
 Per = Literal["run", "participant", "development"]
 Unit = Literal["per_person", "per_group", "per_event", "per_project", "per_pack", "per_month", "per_session"]
@@ -127,7 +128,7 @@ class Offering:
         if self.participants_expected < 1:
             raise ValueError(f"{self.name}: participants_expected must be >= 1")
 
-    def with_(self, **changes) -> "Offering":
+    def with_(self, **changes) -> Offering:
         """A copy with some fields changed (``dataclasses.replace``)."""
         return replace(self, **changes)
 

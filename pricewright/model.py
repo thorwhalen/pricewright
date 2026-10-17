@@ -19,8 +19,8 @@ hour worked, price per contact hour, break-even seats) is recomputed from the
 
 from __future__ import annotations
 
+from collections.abc import Mapping
 from dataclasses import dataclass, field
-from typing import Mapping
 
 from pricewright.base import Offering, Rates
 from pricewright.rounding import Rounder, nice_round
@@ -167,8 +167,7 @@ def price(offering: Offering, rates: Rates | None = None, *, rounder: Rounder = 
         labour.append(Line(e.label, _kind(e.kind, e.per), h * rates.hourly(e.role), hours=h, role=e.role))
         hours_by_role[e.role] = hours_by_role.get(e.role, 0.0) + h
     direct = [
-        Line(c.label, _kind(c.kind, c.per), c.amount * (1 + c.markup) * _scale(c.per, offering=o))
-        for c in o.costs
+        Line(c.label, _kind(c.kind, c.per), c.amount * (1 + c.markup) * _scale(c.per, offering=o)) for c in o.costs
     ]
     labour_total = sum(ln.amount for ln in labour)
     direct_total = sum(ln.amount for ln in direct)
