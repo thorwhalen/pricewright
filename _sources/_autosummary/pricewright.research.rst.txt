@@ -1,0 +1,26 @@
+pricewright.research
+====================
+
+.. automodule:: pricewright.research
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      as_is
+      load_packet
+      per_contact_hour
+      per_finished_minute
+      per_person_contact_hour
+      position
+      select
+      summary
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Comparable
+      Position
+   

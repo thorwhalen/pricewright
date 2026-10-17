@@ -1,0 +1,13 @@
+pricewright.rounding
+====================
+
+.. automodule:: pricewright.rounding
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      nice_round
+      no_round
+   

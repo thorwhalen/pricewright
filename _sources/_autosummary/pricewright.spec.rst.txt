@@ -1,0 +1,21 @@
+pricewright.spec
+================
+
+.. automodule:: pricewright.spec
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      build_card
+      load_spec
+      make_offering
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Card
+      Entry
+   

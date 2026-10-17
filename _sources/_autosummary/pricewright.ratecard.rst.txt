@@ -1,0 +1,23 @@
+pricewright.ratecard
+====================
+
+.. automodule:: pricewright.ratecard
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      check_card
+      dominance
+      effective_rate_spread
+      online_vs_onsite
+      private_vs_seats
+      volume_per_hour
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Finding
+   

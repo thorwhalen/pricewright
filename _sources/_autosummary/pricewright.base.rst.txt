@@ -1,0 +1,21 @@
+pricewright.base
+================
+
+.. automodule:: pricewright.base
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      day_rate_from_income
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Cost
+      Effort
+      Offering
+      Rates
+   

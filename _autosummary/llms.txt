@@ -1,0 +1,20 @@
+# pricewright
+
+> Price services and products from a model of their costs and effort, with travel, rate-card consistency checks and market comparables
+
+
+## Pages in this subsection
+
+- [pricewright](pricewright.html.md): pricewright: price services and products from a model of their costs and effort.
+- [pricewright.base](pricewright.base.html.md): The data model of a price: who works how long, what it costs, and on what terms.
+- [pricewright.model](pricewright.model.html.md): The cost-and-effort model: from an &#96;Offering&#96; to a price.
+- [pricewright.ratecard](pricewright.ratecard.html.md): Consistency across a whole rate card.
+- [pricewright.report](pricewright.report.html.md): Render a &#96;Card&#96; as a Markdown rate card with its rationale.
+- [pricewright.research](pricewright.research.html.md): Market research as an input: comparables packets, normalised and compared.
+- [pricewright.rounding](pricewright.rounding.html.md): Rounding a computed price to a number a person would print on a rate card.
+- [pricewright.spec](pricewright.spec.html.md): A rate card as data: one YAML spec in, priced and checked card out.
+- [pricewright.travel](pricewright.travel.html.md): Travel as explicit variables: time away, nights, subsistence, transport.
+
+## Optional
+
+- [Top-level llms.txt](../llms.txt): Complete documentation index.

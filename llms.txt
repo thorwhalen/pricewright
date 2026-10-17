@@ -1,0 +1,28 @@
+# pricewright
+
+> Price services and products from a model of their costs and effort, with travel, rate-card consistency checks and market comparables
+
+
+## Pages
+
+- [pricewright](index.html.md): Price services and products from a model of their costs and effort, not from a market median. Travel...
+- [API reference](api.html.md): | &#96;pricewright&#96;   | pricewright: price services and products from a model of their costs and effort....
+- [pricewright](_autosummary/pricewright.html.md): pricewright: price services and products from a model of their costs and effort.
+- [pricewright.base](_autosummary/pricewright.base.html.md): The data model of a price: who works how long, what it costs, and on what terms.
+- [pricewright.model](_autosummary/pricewright.model.html.md): The cost-and-effort model: from an &#96;Offering&#96; to a price.
+- [pricewright.ratecard](_autosummary/pricewright.ratecard.html.md): Consistency across a whole rate card.
+- [pricewright.report](_autosummary/pricewright.report.html.md): Render a &#96;Card&#96; as a Markdown rate card with its rationale.
+- [pricewright.research](_autosummary/pricewright.research.html.md): Market research as an input: comparables packets, normalised and compared.
+- [pricewright.rounding](_autosummary/pricewright.rounding.html.md): Rounding a computed price to a number a person would print on a rate card.
+- [pricewright.spec](_autosummary/pricewright.spec.html.md): A rate card as data: one YAML spec in, priced and checked card out.
+- [pricewright.travel](_autosummary/pricewright.travel.html.md): Travel as explicit variables: time away, nights, subsistence, transport.
+- [For AI agents](ai-agents.html.md): &#96;pricewright&#96; ships artifacts for coding agents alongside its code. This page lists
+- [About this build](about-this-build.html.md): This documentation was built on &#42;&#42;2026-10-17 07:10 UTC&#42;&#42; from commit &lt;a href="https://github.com/tho...
+
+## Optional
+
+- [pricewright.md](pricewright.md): Complete documentation in a single file.
+
+## Build
+
+- [build_info.json](build_info.json): build provenance (commit, version, tool versions, whether the docs match the package)

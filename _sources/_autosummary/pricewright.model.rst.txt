@@ -1,0 +1,19 @@
+pricewright.model
+=================
+
+.. automodule:: pricewright.model
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      price
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Line
+      Quote
+   

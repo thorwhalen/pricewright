@@ -1,0 +1,18 @@
+pricewright.report
+==================
+
+.. automodule:: pricewright.report
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      entry_block
+      findings_block
+      inputs_block
+      render
+      sensitivity_block
+      summary_table
+      travel_block
+   

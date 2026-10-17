@@ -1,0 +1,21 @@
+pricewright.travel
+==================
+
+.. automodule:: pricewright.travel
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      nights_needed
+      travel_addon
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      TravelPolicy
+      TravelQuote
+      Trip
+   

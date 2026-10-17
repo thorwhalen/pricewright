@@ -1,0 +1,55 @@
+﻿pricewright
+===========
+
+.. automodule:: pricewright
+
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+   
+      build_card
+      check_card
+      day_rate_from_income
+      get_specialty
+      load_packet
+      load_spec
+      make_offering
+      position
+      price
+      register
+      render
+      specialties
+      template
+      travel_addon
+   
+   .. rubric:: Classes
+
+   .. autosummary::
+   
+      Card
+      Comparable
+      Cost
+      Effort
+      Finding
+      Offering
+      Quote
+      Rates
+      Specialty
+      TravelPolicy
+      Trip
+   
+.. rubric:: Modules
+
+.. autosummary::
+   :toctree:
+   :recursive:
+
+   base
+   model
+   ratecard
+   report
+   research
+   rounding
+   spec
+   travel

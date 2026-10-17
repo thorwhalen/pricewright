@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "built_at": "2026-10-17T07:10:27Z",
+  "package": {
+    "name": "pricewright",
+    "version": "0.0.1",
+    "display_name": "pricewright",
+    "source": "pyproject.toml"
+  },
+  "git": {
+    "available": true,
+    "commit": "ffd5c6a07fb374bd3da329986b29c8d4ce812d4e",
+    "short_commit": "ffd5c6a",
+    "branch": "main",
+    "tags": [],
+    "dirty": false,
+    "remote_url": "https://github.com/thorwhalen/pricewright",
+    "commit_url": "https://github.com/thorwhalen/pricewright/commit/ffd5c6a07fb374bd3da329986b29c8d4ce812d4e",
+    "error": null
+  },
+  "ci": {
+    "provider": "github",
+    "repository": "thorwhalen/pricewright",
+    "sha": "ffd5c6a07fb374bd3da329986b29c8d4ce812d4e",
+    "sha_in_history": true,
+    "ref": "refs/heads/main",
+    "ref_name": "main",
+    "run_id": "39012553804",
+    "run_url": "https://github.com/thorwhalen/pricewright/actions/runs/39012553804",
+    "server_url": "https://github.com"
+  },
+  "tools": {
+    "epythet": "0.2.17",
+    "sphinx": "9.1.0",
+    "docutils": "0.22.4",
+    "python": "3.12.15"
+  },
+  "config": {
+    "theme": "auto",
+    "html_theme": "sphinxawesome_theme",
+    "accent": "#006787",
+    "mode": "auto",
+    "api_generator": "autosummary",
+    "ignore": [
+      "tests/",
+      "scrap/",
+      "examples/"
+    ],
+    "agent_outputs": true,
+    "aggregates": [
+      "md"
+    ],
+    "ai_artifacts": true,
+    "provenance": true,
+    "docs_dir": "docsrc"
+  },
+  "site": {
+    "modules_documented": 9,
+    "objects_documented": 75
+  },
+  "pypi": {
+    "checked": true,
+    "latest": "0.0.2",
+    "relation": "behind",
+    "error": null
+  },
+  "reproduce": "git clone https://github.com/thorwhalen/pricewright && cd pricewright\ngit checkout ffd5c6a07fb374bd3da329986b29c8d4ce812d4e\npip install \"epythet==0.2.17\"\nepythet quickstart . --ignore tests/ scrap/ examples/",
+  "warnings": [],
+  "alignment": {
+    "aligned": false,
+    "notes": [
+      "The documented version (0.0.1) is behind the latest release on PyPI (0.0.2): `pip install pricewright` gives newer code than these docs describe."
+    ]
+  }
+}
