@@ -8,7 +8,7 @@ Any ``Callable[[float], float]`` can replace it (the ``rounder=`` seam).
 from __future__ import annotations
 
 import math
-from typing import Callable, Sequence
+from collections.abc import Callable, Sequence
 
 Rounder = Callable[[float], float]
 

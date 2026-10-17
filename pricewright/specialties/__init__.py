@@ -12,8 +12,8 @@ line in ``_BUILTIN`` below (or a call to :func:`register` from your own code).
 from __future__ import annotations
 
 import importlib
+from collections.abc import Callable, Mapping
 from dataclasses import dataclass, field
-from typing import Callable, Mapping
 
 from pricewright.base import Offering
 from pricewright.ratecard import Check

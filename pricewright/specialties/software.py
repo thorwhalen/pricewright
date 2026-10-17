@@ -61,7 +61,15 @@ def plan(
     )
 
 
-def credit_pack(*, credits: float, cost_per_credit: float, target_gross_margin: float | None = None, name: str | None = None, defaults: dict | None = None, **overrides) -> Offering:
+def credit_pack(
+    *,
+    credits: float,
+    cost_per_credit: float,
+    target_gross_margin: float | None = None,
+    name: str | None = None,
+    defaults: dict | None = None,
+    **overrides,
+) -> Offering:
     """A one-off top-up of credits, at the same floor rule."""
     D = {**DEFAULTS, **(defaults or {})}
     return plan(

@@ -22,8 +22,8 @@ reads like the process the client was shown.
 
 from __future__ import annotations
 
+from collections.abc import Mapping
 from dataclasses import dataclass
-from typing import Mapping
 
 from pricewright.base import Cost, Effort, Offering
 from pricewright.specialties import MarketRef, Specialty, register
@@ -63,49 +63,128 @@ def _style(**crafts: tuple[float, float]) -> Mapping[str, CraftHours]:
 # re-fitted to the studio's own timesheets.
 STYLES: dict[str, Mapping[str, CraftHours]] = {
     "commercial": _style(  # ~22 h fixed + ~22 h/min
-        research=(1, 0.5), story_script=(4, 2), character_design=(3, 0), look=(4, 0),
-        storyboard_animatic=(2, 2), performance_voice=(1, 1.5), generation=(1, 6),
-        selection_continuity=(1, 4), music=(2, 2), sound=(1, 1), edit=(1, 2.5), finishing=(1, 0.5),
+        research=(1, 0.5),
+        story_script=(4, 2),
+        character_design=(3, 0),
+        look=(4, 0),
+        storyboard_animatic=(2, 2),
+        performance_voice=(1, 1.5),
+        generation=(1, 6),
+        selection_continuity=(1, 4),
+        music=(2, 2),
+        sound=(1, 1),
+        edit=(1, 2.5),
+        finishing=(1, 0.5),
     ),
     "brand_film": _style(  # ~20 h + ~18 h/min
-        research=(2, 1), story_script=(4, 2), character_design=(2, 0), look=(3, 0),
-        storyboard_animatic=(2, 1.5), performance_voice=(1, 1), generation=(1, 5),
-        selection_continuity=(1, 3), music=(2, 1.5), sound=(1, 0.5), edit=(1, 2), finishing=(0, 0.5),
+        research=(2, 1),
+        story_script=(4, 2),
+        character_design=(2, 0),
+        look=(3, 0),
+        storyboard_animatic=(2, 1.5),
+        performance_voice=(1, 1),
+        generation=(1, 5),
+        selection_continuity=(1, 3),
+        music=(2, 1.5),
+        sound=(1, 0.5),
+        edit=(1, 2),
+        finishing=(0, 0.5),
     ),
     "narrative_short": _style(  # ~32 h + ~22 h/min
-        research=(2, 0.5), story_script=(8, 2.5), character_design=(6, 0), look=(5, 0),
-        storyboard_animatic=(2, 2), performance_voice=(2, 2), generation=(1, 6),
-        selection_continuity=(1, 4), music=(2, 1.5), sound=(1, 1), edit=(1, 2), finishing=(1, 0.5),
+        research=(2, 0.5),
+        story_script=(8, 2.5),
+        character_design=(6, 0),
+        look=(5, 0),
+        storyboard_animatic=(2, 2),
+        performance_voice=(2, 2),
+        generation=(1, 6),
+        selection_continuity=(1, 4),
+        music=(2, 1.5),
+        sound=(1, 1),
+        edit=(1, 2),
+        finishing=(1, 0.5),
     ),
     "explainer": _style(  # ~12 h + ~12 h/min
-        research=(2, 1), story_script=(3, 2), character_design=(1, 0), look=(2, 0),
-        storyboard_animatic=(1, 1), performance_voice=(0, 1), generation=(1, 3),
-        selection_continuity=(0, 1.5), music=(1, 0.5), sound=(0, 0.5), edit=(1, 1), finishing=(0, 0.5),
+        research=(2, 1),
+        story_script=(3, 2),
+        character_design=(1, 0),
+        look=(2, 0),
+        storyboard_animatic=(1, 1),
+        performance_voice=(0, 1),
+        generation=(1, 3),
+        selection_continuity=(0, 1.5),
+        music=(1, 0.5),
+        sound=(0, 0.5),
+        edit=(1, 1),
+        finishing=(0, 0.5),
     ),
     "animation": _style(  # ~26 h + ~22 h/min
-        research=(1, 0.5), story_script=(4, 2), character_design=(7, 0), look=(5, 0),
-        storyboard_animatic=(2, 2), performance_voice=(1, 1.5), generation=(1, 6),
-        selection_continuity=(1, 4), music=(2, 2), sound=(1, 1), edit=(1, 2.5), finishing=(0, 0.5),
+        research=(1, 0.5),
+        story_script=(4, 2),
+        character_design=(7, 0),
+        look=(5, 0),
+        storyboard_animatic=(2, 2),
+        performance_voice=(1, 1.5),
+        generation=(1, 6),
+        selection_continuity=(1, 4),
+        music=(2, 2),
+        sound=(1, 1),
+        edit=(1, 2.5),
+        finishing=(0, 0.5),
     ),
     "documentary": _style(  # ~30 h + ~10 h/min (long runtimes)
-        research=(10, 2), story_script=(6, 1.5), character_design=(1, 0), look=(4, 0),
-        storyboard_animatic=(1, 0.5), performance_voice=(1, 0.5), generation=(1, 1.5),
-        selection_continuity=(1, 1), music=(2, 0.5), sound=(1, 0.5), edit=(1, 1.5), finishing=(1, 0.5),
+        research=(10, 2),
+        story_script=(6, 1.5),
+        character_design=(1, 0),
+        look=(4, 0),
+        storyboard_animatic=(1, 0.5),
+        performance_voice=(1, 0.5),
+        generation=(1, 1.5),
+        selection_continuity=(1, 1),
+        music=(2, 0.5),
+        sound=(1, 0.5),
+        edit=(1, 1.5),
+        finishing=(1, 0.5),
     ),
     "music_video": _style(  # ~18 h + ~14 h/min; the music is the client's
-        research=(1, 0), story_script=(3, 1), character_design=(4, 0), look=(5, 0),
-        storyboard_animatic=(2, 1.5), generation=(1, 5), selection_continuity=(1, 3.5),
-        sound=(0, 0), edit=(1, 2.5), finishing=(0, 0.5),
+        research=(1, 0),
+        story_script=(3, 1),
+        character_design=(4, 0),
+        look=(5, 0),
+        storyboard_animatic=(2, 1.5),
+        generation=(1, 5),
+        selection_continuity=(1, 3.5),
+        sound=(0, 0),
+        edit=(1, 2.5),
+        finishing=(0, 0.5),
     ),
     "pitch_previs": _style(  # ~16 h + ~12 h/min; rougher finish
-        research=(2, 0.5), story_script=(4, 1.5), character_design=(3, 0), look=(4, 0),
-        storyboard_animatic=(1, 2), performance_voice=(0, 1), generation=(1, 3),
-        selection_continuity=(0, 1.5), music=(1, 1), sound=(0, 0.5), edit=(0, 1), finishing=(0, 0),
+        research=(2, 0.5),
+        story_script=(4, 1.5),
+        character_design=(3, 0),
+        look=(4, 0),
+        storyboard_animatic=(1, 2),
+        performance_voice=(0, 1),
+        generation=(1, 3),
+        selection_continuity=(0, 1.5),
+        music=(1, 1),
+        sound=(0, 0.5),
+        edit=(0, 1),
+        finishing=(0, 0),
     ),
     "social_series": _style(  # ~20 h + ~18 h/min, per episode or batch
-        research=(1, 0.5), story_script=(4, 2), character_design=(5, 0), look=(4, 0),
-        storyboard_animatic=(1, 1.5), performance_voice=(1, 1.5), generation=(1, 5),
-        selection_continuity=(1, 3), music=(1, 1), sound=(0, 1), edit=(1, 2), finishing=(0, 0.5),
+        research=(1, 0.5),
+        story_script=(4, 2),
+        character_design=(5, 0),
+        look=(4, 0),
+        storyboard_animatic=(1, 1.5),
+        performance_voice=(1, 1.5),
+        generation=(1, 5),
+        selection_continuity=(1, 3),
+        music=(1, 1),
+        sound=(0, 1),
+        edit=(1, 2),
+        finishing=(0, 0.5),
     ),
 }
 
@@ -136,7 +215,9 @@ USAGE: dict[str, float] = {
 }
 
 
-def _effort_lines(style: str, minutes: float, *, D: Mapping, skip_fixed: tuple[str, ...] = (), fixed_share: float = 1.0):
+def _effort_lines(
+    style: str, minutes: float, *, D: Mapping, skip_fixed: tuple[str, ...] = (), fixed_share: float = 1.0
+):
     try:
         table = STYLES[style]
     except KeyError:
@@ -219,7 +300,9 @@ def pilot(
     """
     D = {**DEFAULTS, **(defaults or {}), "review_rounds": 1}
     eff = _effort_lines(style, seconds / 60, D=D, fixed_share=setup_share)
-    o = production(style=style, seconds=seconds, defaults=D, name=name or f"Pilot, {style.replace('_', ' ')}, {seconds:g} s")
+    o = production(
+        style=style, seconds=seconds, defaults=D, name=name or f"Pilot, {style.replace('_', ' ')}, {seconds:g} s"
+    )
     return o.with_(
         efforts=tuple(eff),
         margin=0.0,

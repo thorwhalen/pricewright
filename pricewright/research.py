@@ -17,9 +17,9 @@ from __future__ import annotations
 
 import json
 import statistics
+from collections.abc import Callable, Iterable, Iterator, Mapping, Sequence
 from dataclasses import dataclass, fields
 from pathlib import Path
-from typing import Callable, Iterable, Iterator, Mapping, Sequence
 
 EVIDENCE_WEIGHT: Mapping[str, float] = {"fetched": 1.0, "secondary": 0.7, "snippet": 0.5, "inferred": 0.3}
 

@@ -15,9 +15,10 @@ Minimal spec::
 
 from __future__ import annotations
 
+from collections.abc import Mapping, Sequence
 from dataclasses import dataclass, field
 from pathlib import Path
-from typing import Any, Mapping, Sequence
+from typing import Any
 
 from pricewright.base import Offering, Rates
 from pricewright.model import Quote, price
@@ -25,9 +26,20 @@ from pricewright.ratecard import DFLT_CHECKS, Finding, check_card
 from pricewright.research import Comparable, Position, load_packet, position, select
 from pricewright.rounding import nice_round
 from pricewright.specialties import get_specialty, template
-from pricewright.travel import Trip, TravelPolicy, TravelQuote, travel_addon
+from pricewright.travel import TravelPolicy, TravelQuote, Trip, travel_addon
 
-_OFFERING_FIELDS = {"positioning", "contingency", "margin", "fees_pct", "fees_fixed_per_txn", "amortize_runs", "family", "terms", "includes", "notes"}
+_OFFERING_FIELDS = {
+    "positioning",
+    "contingency",
+    "margin",
+    "fees_pct",
+    "fees_fixed_per_txn",
+    "amortize_runs",
+    "family",
+    "terms",
+    "includes",
+    "notes",
+}
 
 
 @dataclass(frozen=True)
@@ -122,20 +134,27 @@ def _position(quote: Quote, item: Mapping, comps: Sequence[Comparable], spec: Ma
         return None
     over = item.get("market", {})
     exclude_ids = set(over.get("exclude_ids", ()))
-    chosen = [c for c in (
-        select(
-            comps,
-            specialty=s.name,
-            offerings=over.get("offerings", ref.offerings),
-            units=over.get("units", ref.units) or None,
-            delivery=over.get("delivery"),
-            exclude_tiers=over.get("exclude_tiers", spec.get("market", {}).get("exclude_tiers", ())),
+    chosen = [
+        c
+        for c in (
+            select(
+                comps,
+                specialty=s.name,
+                offerings=over.get("offerings", ref.offerings),
+                units=over.get("units", ref.units) or None,
+                delivery=over.get("delivery"),
+                exclude_tiers=over.get("exclude_tiers", spec.get("market", {}).get("exclude_tiers", ())),
+            )
         )
-    ) if c.id not in exclude_ids]
+        if c.id not in exclude_ids
+    ]
     value = _quote_value(quote, over.get("value", ref.value))
     metric = over.get("metric", ref.metric)
     if ref.match is not None and "metric" not in over:
-        metric = lambda c: ref.match(c, quote.offering)  # noqa: E731
+
+        def metric(c, *, _match=ref.match, _o=quote.offering):
+            return _match(c, _o)
+
     return position(value, chosen, metric=metric, fx=spec.get("market", {}).get("fx"), currency=quote.rates.currency)
 
 
@@ -158,15 +177,29 @@ def build_card(spec: Mapping, *, rounder=nice_round) -> Card:
     for item in items:
         q = price(make_offering(item, defaults=defaults), rates, rounder=rounder)
         entries.append(
-            Entry(item["id"], item["specialty"], item["template"], q, _position(q, item, comps, spec), item.get("rationale", ""), _value_attr(item))
+            Entry(
+                item["id"],
+                item["specialty"],
+                item["template"],
+                q,
+                _position(q, item, comps, spec),
+                item.get("rationale", ""),
+                _value_attr(item),
+            )
         )
     extra_checks = tuple(c for name in dict.fromkeys(i["specialty"] for i in items) for c in get_specialty(name).checks)
     findings = check_card([e.quote for e in entries], checks=DFLT_CHECKS + extra_checks)
     travel = tuple(_travel(spec, rates))
     sens = {}
     for dr in spec.get("sensitivity", {}).get("day_rates", []):
-        r = Rates({k: dr * v / rates.day_rates.get("founder", v) for k, v in rates.day_rates.items()}, rates.hours_per_day, rates.currency)
-        sens[dr] = {item["id"]: price(make_offering(item, defaults=defaults), r, rounder=rounder).unit_price for item in items}
+        r = Rates(
+            {k: dr * v / rates.day_rates.get("founder", v) for k, v in rates.day_rates.items()},
+            rates.hours_per_day,
+            rates.currency,
+        )
+        sens[dr] = {
+            item["id"]: price(make_offering(item, defaults=defaults), r, rounder=rounder).unit_price for item in items
+        }
     return Card(spec.get("title", "Rate card"), spec, rates, tuple(entries), tuple(findings), travel, sens)
 
 
