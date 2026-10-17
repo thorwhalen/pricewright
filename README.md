@@ -13,9 +13,9 @@ pricewright specialties                       # templates, and the research each
 from pricewright import price, Rates
 from pricewright.specialties.training import talk, private_workshop
 
-rates = Rates({"founder": 900})                       # target day rate, 7 h a day
+rates = Rates({"founder": 900})  # target day rate, 7 h a day
 q = price(talk(delivery="online"), rates)
-q.unit_price, q.hours_total, q.effective_day           # 1700, 11.2, ~1058
+q.unit_price, q.hours_total, q.effective_day  # 1700, 11.2, ~1058
 ```
 
 ## Why

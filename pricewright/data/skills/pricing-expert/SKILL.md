@@ -58,6 +58,7 @@ pricewright travel 3.5 --transport 180 --days 2 --travellers 2 --day-rate 900
 ```python
 from pricewright import build_card, load_spec, render, price, Rates
 from pricewright.specialties.training import talk
+
 price(talk(delivery="onsite"), Rates({"founder": 900})).unit_price
 ```
 
