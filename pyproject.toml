@@ -1,0 +1,80 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pricewright"
+version = "0.0.1"
+description = "Price services and products from a model of their costs and effort, with travel, rate-card consistency checks and market comparables"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Thor Whalen" }]
+requires-python = ">=3.10"
+keywords = ["pricing", "rate-card", "quote", "cost-plus", "training", "video-production", "saas-pricing", "travel-expenses"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Office/Business :: Financial",
+]
+dependencies = ["pyyaml"]
+
+[project.urls]
+Homepage = "https://github.com/thorwhalen/pricewright"
+Repository = "https://github.com/thorwhalen/pricewright"
+Issues = "https://github.com/thorwhalen/pricewright/issues"
+
+[project.scripts]
+pricewright = "pricewright.__main__:main"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pricewright*"]
+
+[tool.setuptools.package-data]
+pricewright = ["data/**/*"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.wads.ci]
+project_name = ""
+
+[tool.wads.ci.commands]
+pre_test = []
+test = []
+post_test = []
+lint = []
+format = []
+
+[tool.wads.ci.env]
+required_envvars = []
+test_envvars = []
+extra_envvars = []
+
+[tool.wads.ci.env.defaults]
+
+[tool.wads.ci.quality.ruff]
+enabled = true
+
+[tool.wads.ci.quality.black]
+enabled = false
+
+[tool.wads.ci.quality.mypy]
+enabled = false
+
+[tool.wads.ci.testing]
+enabled = true
+python_versions = ["3.10", "3.12"]
+pytest_args = ["-v", "--tb=short", "--doctest-modules"]
+coverage_enabled = true
+coverage_threshold = 0
+coverage_report_format = ["term", "xml"]
+exclude_paths = ["examples", "scrap"]

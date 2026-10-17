@@ -1,0 +1,880 @@
+# AV production comparables packet (pricewright research packet v0.1). See SCHEMA.md and av-production.md.
+- id: wyzowl-explainer-1min-median
+  specialty: av_production
+  offering: explainer
+  provider: Wyzowl survey of 242 production companies (via TruScribe)
+  region: global
+  price: 5400
+  currency: USD
+  unit: per_project
+  duration_s: 60
+  delivery: n/a
+  provider_tier: agency
+  evidence: secondary
+  date: 2024
+  url: https://truscribe.com/feeds/blog/explainer-video-cost
+  notes: median for 1-min animated explainer; mean 10983; range 600-250000
+- id: bluecarrot-whiteboard-per-min
+  specialty: av_production
+  offering: explainer
+  provider: Blue Carrot (via TruScribe)
+  region: US
+  price_low: 1000
+  price_high: 2000
+  currency: USD
+  unit: per_finished_minute
+  delivery: n/a
+  provider_tier: agency
+  evidence: secondary
+  date: 2025
+  url: https://truscribe.com/feeds/blog/explainer-video-cost
+  notes: whiteboard style
+- id: bluecarrot-motiongraphics-60s
+  specialty: av_production
+  offering: explainer
+  provider: Blue Carrot (via TruScribe)
+  region: US
+  price_low: 2500
+  price_high: 3000
+  currency: USD
+  unit: per_project
+  duration_s: 60
+  delivery: n/a
+  provider_tier: agency
+  evidence: secondary
+  date: 2025
+  url: https://truscribe.com/feeds/blog/explainer-video-cost
+  notes: motion graphics, 60 seconds
+- id: bluecarrot-2d-character-per-min
+  specialty: av_production
+  offering: animation
+  provider: Blue Carrot (via TruScribe)
+  region: US
+  price_low: 2000
+  price_high: 4000
+  currency: USD
+  unit: per_finished_minute
+  delivery: n/a
+  provider_tier: agency
+  evidence: secondary
+  date: 2025
+  url: https://truscribe.com/feeds/blog/explainer-video-cost
+  notes: 2D character animation
+- id: bluecarrot-3d-per-min
+  specialty: av_production
+  offering: animation
+  provider: Blue Carrot (via TruScribe)
+  region: US
+  price_low: 4000
+  price_high: 10000
+  currency: USD
+  unit: per_finished_minute
+  delivery: n/a
+  provider_tier: agency
+  evidence: secondary
+  date: 2025
+  url: https://truscribe.com/feeds/blog/explainer-video-cost
+  notes: 3D animation
+- id: pixune-premium-2d3d-60s
+  specialty: av_production
+  offering: animation
+  provider: Pixune
+  region: US
+  price_low: 10000
+  price_high: 25000
+  currency: USD
+  unit: per_project
+  duration_s: 60
+  delivery: n/a
+  provider_tier: agency
+  evidence: snippet
+  date: 2025
+  url: https://pixune.com/?p=50688
+  notes: premium 2D/3D for well-funded companies
+- id: lfdn-motion-design-fr-median
+  specialty: av_production
+  offering: explainer
+  provider: La Fabrique du Net (155 agency projects)
+  region: FR
+  price: 8000
+  currency: EUR
+  unit: per_project
+  delivery: n/a
+  provider_tier: agency
+  evidence: snippet
+  date: 2026
+  url: https://www.lafabriquedunet.fr/agences/pages/agences-motion-design/tarifs
+  notes: median; mean 12245; range 600-90000; <5000 = short 2D on existing charter; 5000-10000 with VO and sound design
+- id: lfdn-video-agency-fr-median
+  specialty: av_production
+  offering: corporate_video
+  provider: La Fabrique du Net (170+ projects)
+  region: FR
+  price: 6500
+  price_low: 4600
+  price_high: 15000
+  currency: EUR
+  unit: per_project
+  delivery: n/a
+  provider_tier: agency
+  evidence: snippet
+  date: 2026
+  url: https://www.lafabriquedunet.fr/agences/pages/agences-video/tarifs
+  notes: median 6500, core market 4600-15000, all video types
+- id: whito-corporate-uk-per-min
+  specialty: av_production
+  offering: corporate_video
+  provider: Whito
+  region: UK
+  price_low: 1000
+  price_high: 3000
+  currency: GBP
+  unit: per_finished_minute
+  delivery: n/a
+  provider_tier: agency
+  evidence: snippet
+  url: https://whito.co.uk/?p=9126
+  notes: London 15-25% higher
+- id: dragonfly-corporate-uk-per-min
+  specialty: av_production
+  offering: brand_film
+  provider: Dragonfly (London)
+  region: UK
+  price_low: 4000
+  price_high: 10000
+  currency: GBP
+  unit: per_finished_minute
+  delivery: n/a
+  provider_tier: agency
+  evidence: snippet
+  url: https://www.dragonfly.co.uk/faq/how-much-does-a-corporate-video-cost/
+- id: lambda-tvc-uk-small
+  specialty: av_production
+  offering: commercial
+  provider: Lambda Films
+  region: UK
+  price_low: 5000
+  price_high: 30000
+  currency: GBP
+  unit: per_project
+  delivery: n/a
+  provider_tier: agency
+  evidence: snippet
+  url: https://lambdafilms.co.uk/cost-to-advertise-on-tv
+  notes: small business / first TV ad; production only, airtime separate
+- id: lambda-tvc-uk-mid
+  specialty: av_production
+  offering: commercial
+  provider: Lambda Films
+  region: UK
+  price_low: 30000
+  price_high: 100000
+  currency: GBP
+  unit: per_project
+  delivery: n/a
+  provider_tier: agency
+  evidence: snippet
+  url: https://lambdafilms.co.uk/cost-to-advertise-on-tv
+  notes: professional live action, regional/national; celebrity/bespoke music 100000-500000+
+- id: vidico-30s-local
+  specialty: av_production
+  offering: commercial
+  provider: Vidico
+  region: US
+  price_low: 3000
+  price_high: 15000
+  currency: USD
+  unit: per_project
+  duration_s: 30
+  delivery: n/a
+  provider_tier: agency
+  evidence: fetched
+  date: 2026-09
+  url: https://vidico.com/news/how-much-does-a-30-second-commercial-cost/
+  notes: local / small business tier
+- id: vidico-30s-regional
+  specialty: av_production
+  offering: commercial
+  provider: Vidico
+  region: US
+  price_low: 15000
+  price_high: 50000
+  currency: USD
+  unit: per_project
+  duration_s: 30
+  delivery: n/a
+  provider_tier: agency
+  evidence: fetched
+  date: 2026-09
+  url: https://vidico.com/news/how-much-does-a-30-second-commercial-cost/
+  notes: regional professional tier
+- id: vidico-30s-national
+  specialty: av_production
+  offering: commercial
+  provider: Vidico
+  region: US
+  price_low: 50000
+  price_high: 500000
+  currency: USD
+  unit: per_project
+  duration_s: 30
+  delivery: n/a
+  provider_tier: agency
+  evidence: fetched
+  date: 2026-09
+  url: https://vidico.com/news/how-much-does-a-30-second-commercial-cost/
+  notes: national standard tier, 500000+ open-ended; rush +20-30%; editing 20-30% of budget
+- id: vidico-director-crew-day
+  specialty: av_production
+  offering: crew_day_rate
+  provider: Vidico
+  region: US
+  price_low: 5000
+  price_high: 20000
+  currency: USD
+  unit: per_day
+  delivery: onsite
+  provider_tier: agency
+  evidence: fetched
+  date: 2026-09
+  url: https://vidico.com/news/how-much-does-a-30-second-commercial-cost/
+  notes: director and crew per shoot day, 30 s commercial budget line
+- id: lemonlight-traditional-30s
+  specialty: av_production
+  offering: brand_film
+  provider: Lemonlight
+  region: US
+  price_low: 15000
+  price_high: 50000
+  currency: USD
+  unit: per_project
+  duration_s: 30
+  delivery: n/a
+  provider_tier: agency
+  evidence: fetched
+  date: 2026-03
+  url: https://www.lemonlight.com/blog/ai-video-production-cost/
+  notes: professional 30 s brand video, traditional
+- id: lemonlight-ai-30s
+  specialty: av_production
+  offering: commercial
+  provider: Lemonlight
+  region: US
+  price: 5000
+  currency: USD
+  unit: per_project
+  duration_s: 30
+  delivery: n/a
+  provider_tier: agency
+  evidence: fetched
+  date: 2026-03
+  url: https://www.lemonlight.com/blog/ai-video-production-cost/
+  notes: AI-assisted, "from" price; includes strategy, script, human QA; claims ~60-70% below traditional; as little as 3 weeks
+- id: maidreams-ai-spot
+  specialty: av_production
+  offering: commercial
+  provider: MaiDreamsLab
+  region: EU
+  price_low: 2000
+  price_high: 4500
+  currency: EUR
+  unit: per_project
+  delivery: n/a
+  provider_tier: new
+  evidence: fetched
+  date: 2026
+  url: https://maidreamslab.ai/en/blog/how-much-ai-commercial-pricing-2026/
+  notes: AI commercial service page price; 2 revision cycles; unlimited perpetual worldwide licence; 40/60 payment, 30/40/30 above 15000; master in 5-7 days
+- id: maidreams-ai-midmarket-tier
+  specialty: av_production
+  offering: commercial
+  provider: MaiDreamsLab (market tier)
+  region: EU
+  price_low: 1500
+  price_high: 3500
+  currency: EUR
+  unit: per_project
+  delivery: n/a
+  provider_tier: agency
+  evidence: fetched
+  date: 2026
+  url: https://maidreamslab.ai/en/blog/how-much-ai-commercial-pricing-2026/
+  notes: mid-market AI studio, 15-60 s broadcast-ready; freelance tier 300-1000 (no post, no licence); premium 5000-15000
+- id: maidreams-traditional-30s
+  specialty: av_production
+  offering: commercial
+  provider: MaiDreamsLab (market tier)
+  region: EU
+  price_low: 15000
+  price_high: 60000
+  currency: EUR
+  unit: per_project
+  duration_s: 30
+  delivery: n/a
+  provider_tier: agency
+  evidence: fetched
+  date: 2026
+  url: https://maidreamslab.ai/en/blog/how-much-ai-commercial-pricing-2026/
+  notes: traditional mid-market 30 s; itemised 17300-58500; 30-44 working days
+- id: maidreams-ai-series-episode
+  specialty: av_production
+  offering: social_series
+  provider: MaiDreamsLab
+  region: EU
+  price_low: 5000
+  currency: EUR
+  unit: per_project
+  delivery: n/a
+  provider_tier: new
+  evidence: fetched
+  date: 2026
+  url: https://maidreamslab.ai/en/blog/how-much-ai-commercial-pricing-2026/
+  notes: AI comedy series, "from" per episode; recurring series bespoke
+- id: maidreams-localisation
+  specialty: av_production
+  offering: localised_variant
+  provider: MaiDreamsLab
+  region: EU
+  price_low: 400
+  price_high: 800
+  currency: EUR
+  unit: per_project
+  delivery: n/a
+  provider_tier: new
+  evidence: fetched
+  date: 2026
+  url: https://maidreamslab.ai/en/blog/how-much-ai-commercial-pricing-2026/
+  notes: per extra language beyond IT/EN; traditional extra formats 500-1500 each (included with AI)
+- id: 1bvp-ai-30s
+  specialty: av_production
+  offering: commercial
+  provider: 1BVP
+  region: US
+  price: 7500
+  currency: USD
+  unit: per_project
+  duration_s: 30
+  delivery: n/a
+  provider_tier: agency
+  evidence: fetched
+  date: 2026
+  url: https://1bvp.com/ai-commercial-production/
+  notes: flat rate incl. paid, web and broadcast usage; ~7 days; claims ~82% below Clutch avg 42280
+- id: 1bvp-ai-native-market
+  specialty: av_production
+  offering: commercial
+  provider: 1BVP (market tier)
+  region: US
+  price_low: 2000
+  price_high: 9000
+  currency: USD
+  unit: per_project
+  duration_s: 30
+  delivery: n/a
+  provider_tier: agency
+  evidence: fetched
+  date: 2026
+  url: https://1bvp.com/ai-commercial-production/
+  notes: AI-native agency 5-14 days; hybrid AI studio 15000-75000 over 3-8 weeks
+- id: yoprst-ai-per-min
+  specialty: av_production
+  offering: short_film
+  provider: YOPRST
+  region: global
+  price_low: 500
+  price_high: 12000
+  currency: USD
+  unit: per_finished_minute
+  delivery: n/a
+  provider_tier: agency
+  evidence: fetched
+  url: https://prst.media/en/why-cinematic-quality-ai-videos-cannot-be-cheap/
+  notes: turnkey AI video; claims 5-10x cheaper than traditional shoot
+- id: invideo-ai-shorts-per-min
+  specialty: av_production
+  offering: short_film
+  provider: invideo (documented productions)
+  region: global
+  price_low: 315
+  price_high: 750
+  currency: USD
+  unit: per_finished_minute
+  delivery: n/a
+  provider_tier: agency
+  evidence: fetched
+  url: https://invideo.io/blog/ai-film-production-cost/
+  notes: vendor; tool/credit-centred costs; 2-5 days, 1-4 people; 164 clips generated for 41 used
+- id: lemonlight-ai-freelance
+  specialty: av_production
+  offering: commercial
+  provider: Lemonlight (market tier)
+  region: US
+  price_low: 500
+  price_high: 5000
+  currency: USD
+  unit: per_project
+  delivery: n/a
+  provider_tier: freelancer
+  evidence: fetched
+  date: 2026-03
+  url: https://www.lemonlight.com/blog/ai-video-production-cost/
+  notes: freelance AI video; FAQ says 500-3000 for a single video
+- id: fiverr-pro-ai-commercial
+  specialty: av_production
+  offering: commercial
+  provider: Fiverr Pro agency seller
+  region: global
+  price_low: 5000
+  price_high: 10000
+  currency: USD
+  unit: per_project
+  delivery: online
+  provider_tier: freelancer
+  evidence: snippet
+  url: https://fiverr.com/luigiflorente/craft-unique-ai-music-videos
+  notes: scales with 15/30/60 s finished; general Fiverr AI commercial gigs start 30-4875
+- id: aiadoption-starter
+  specialty: av_production
+  offering: pilot
+  provider: AI Adoption Agency
+  region: US
+  price: 299
+  currency: USD
+  unit: per_project
+  duration_s: 30
+  delivery: online
+  provider_tier: new
+  evidence: snippet
+  url: https://aiadoptionagency.com/product/ai-commercial-video-service/
+  notes: one 15-30 s video, AI VO, one revision, 5-7 business days; Standard 599 up to 60 s
+- id: kalshi-ai-ad-tool-cost
+  specialty: av_production
+  offering: commercial
+  provider: PJ Accetturo for Kalshi
+  region: US
+  price_high: 2000
+  currency: USD
+  unit: per_project
+  duration_s: 30
+  delivery: n/a
+  provider_tier: freelancer
+  evidence: fetched
+  date: 2025-06
+  url: https://www.gpb.org/news/2025/06/23/ai-video-ad-making-splash-it-the-future-of-advertising
+  notes: prompting/tool cost under 2000 (fee undisclosed); 1 person 2 days; 300-400 generations for 15 usable clips; Veo 3
+- id: musicvideo-indie
+  specialty: av_production
+  offering: music_video
+  provider: 171 Entertainment / Pixo
+  region: US
+  price_low: 1000
+  price_high: 10000
+  currency: USD
+  unit: per_project
+  delivery: n/a
+  provider_tier: agency
+  evidence: snippet
+  url: https://171entertainment.com/guides/music-video-budget-breakdown/
+  notes: low budget, indie / emerging artists
+- id: musicvideo-professional
+  specialty: av_production
+  offering: music_video
+  provider: Pixo
+  region: US
+  price_low: 5000
+  price_high: 30000
+  currency: USD
+  unit: per_project
+  delivery: n/a
+  provider_tier: agency
+  evidence: snippet
+  date: 2026
+  url: https://pixo.video/blog/how-much-does-a-music-video-cost
+  notes: typical professional; label-backed regularly >100000; split 10-20% pre / 40-60% shoot / 20-35% post
+- id: ai-musicvideo-narrative
+  specialty: av_production
+  offering: music_video
+  provider: AI Video Bootcamp (market guide)
+  region: global
+  price_low: 600
+  price_high: 1200
+  currency: USD
+  unit: per_project
+  delivery: n/a
+  provider_tier: freelancer
+  evidence: snippet
+  url: https://aivideobootcamp.com/blog/how-to-make-money-ai-music-videos/
+  notes: full AI narrative; visualizer 100-300, lyric 200-600, hybrid 800-1500+; compute 250-700 per finished video
+- id: cnc-documentaire-hour-2024
+  specialty: av_production
+  offering: documentary
+  provider: CNC (aided creative documentaries)
+  region: FR
+  price: 225500
+  currency: EUR
+  unit: per_hour
+  duration_s: 3600
+  delivery: n/a
+  provider_tier: institution
+  evidence: fetched
+  date: 2024
+  url: https://www.cnc.fr/professionnels/etudes-et-rapports/etudes-prospectives/la-production-audiovisuelle-aidee-en-2024_2428208
+  notes: average budget (devis) per hour of runtime; 1810 h aided; unit per_hour = per hour of finished runtime
+- id: cnc-animation-hour-2024
+  specialty: av_production
+  offering: animation
+  provider: CNC (aided TV animation)
+  region: FR
+  price: 931600
+  currency: EUR
+  unit: per_hour
+  duration_s: 3600
+  delivery: n/a
+  provider_tier: institution
+  evidence: fetched
+  date: 2024
+  url: https://www.cnc.fr/professionnels/etudes-et-rapports/etudes-prospectives/la-production-audiovisuelle-aidee-en-2024_2428208
+  notes: per hour of runtime; 316 h aided
+- id: bbc-youtube-doc
+  specialty: av_production
+  offering: documentary
+  provider: BBC YouTube commissioning brief
+  region: UK
+  price: 50000
+  currency: GBP
+  unit: per_project
+  duration_s: 1500
+  delivery: n/a
+  provider_tier: institution
+  evidence: snippet
+  date: 2026-08
+  url: https://ppc.land/bbc-offers-50-000-per-youtube-documentary-for-16-24-year-olds/
+  notes: indicative tariff; minimum 25 min; ~3 months delivery
+- id: sizzle-reel-mid
+  specialty: av_production
+  offering: pitch_previs
+  provider: Motion The Agency
+  region: US
+  price_low: 4000
+  price_high: 10000
+  currency: USD
+  unit: per_project
+  delivery: n/a
+  provider_tier: agency
+  evidence: snippet
+  url: https://www.motiontheagency.com/blog/how-much-does-it-cost-to-produce-a-sizzle-reel
+  notes: middle band; low 1000-3000; high 10000+
+- id: animatic-30s
+  specialty: av_production
+  offering: pitch_previs
+  provider: animatic pricing guide
+  region: US
+  price_low: 300
+  price_high: 3000
+  currency: USD
+  unit: per_project
+  duration_s: 30
+  delivery: n/a
+  provider_tier: agency
+  evidence: snippet
+  url: https://monitorbp.ne.gov/post/how-much-does-an-animatic-cost
+  notes: 10-100+ USD per second; complex 5 min 5000-50000+
+- id: vidico-retainer-standard
+  specialty: av_production
+  offering: retainer
+  provider: Vidico (market guide)
+  region: US
+  price_low: 2000
+  price_high: 5000
+  currency: USD
+  unit: per_month
+  delivery: n/a
+  provider_tier: agency
+  evidence: fetched
+  date: 2026-05
+  url: https://vidico.com/news/video-retainer-packages/
+  notes: 1-2 shoot days, 5-6 videos/month; basic 750-2000; premium 5000-10000+; 3-month trial; month-to-month +10-20%; retainers save 15-25%/video at 4+/month
+- id: vidico-per-asset-social
+  specialty: av_production
+  offering: social_series
+  provider: Vidico (market guide)
+  region: US
+  price_low: 500
+  price_high: 1500
+  currency: USD
+  unit: per_project
+  delivery: n/a
+  provider_tier: agency
+  evidence: fetched
+  date: 2026-05
+  url: https://vidico.com/news/video-retainer-packages/
+  notes: per reel/short clip with guaranteed monthly volume; rush +20-50%
+- id: malt-motion-designer-fr
+  specialty: av_production
+  offering: crew_day_rate
+  provider: Malt barometer 2026 (motion designer)
+  region: FR
+  price: 418
+  currency: EUR
+  unit: per_day
+  delivery: either
+  provider_tier: freelancer
+  evidence: secondary
+  date: 2026
+  url: https://www.join-jump.com/guide/motion-designer-freelance
+  notes: average TJM; 266 (0-2y), 333 (3-7y), 415 (8-15y)
+- id: yunojuno-motion-uk
+  specialty: av_production
+  offering: crew_day_rate
+  provider: YunoJuno (motion graphics)
+  region: UK
+  price: 385
+  currency: GBP
+  unit: per_day
+  delivery: either
+  provider_tier: freelancer
+  evidence: fetched
+  date: 2026
+  url: https://yunojuno.com/freelancer-rates-job-role/motion-graphics
+  notes: booking data average
+- id: yunojuno-editor-uk
+  specialty: av_production
+  offering: crew_day_rate
+  provider: YunoJuno (video editing)
+  region: UK
+  price: 403
+  currency: GBP
+  unit: per_day
+  delivery: either
+  provider_tier: freelancer
+  evidence: snippet
+  url: https://yunojuno.com/freelancer-rates-job-role/video-editing
+  notes: editor; ~50 GBP/h; job-advert median England 356/day (n=4, to May 2025)
+- id: fairtv-editor-de
+  specialty: av_production
+  offering: crew_day_rate
+  provider: fairtv producers' letter (editor, camera)
+  region: DE
+  price_low: 350
+  price_high: 500
+  currency: EUR
+  unit: per_day
+  delivery: either
+  provider_tier: freelancer
+  evidence: snippet
+  date: 2021
+  url: https://fairtv.net/downloads/send/22-veroffentlichungen/211-fairtv-produzentinnenbrief2020
+  notes: recommended for 2021/22, plus KSK levy; dated
+- id: bvft-sounddesigner-ads-de
+  specialty: av_production
+  offering: crew_day_rate
+  provider: bvft Gagenempfehlung 2026 (lead sound designer, advertising, invoiced)
+  region: DE
+  price: 595
+  currency: EUR
+  unit: per_day
+  delivery: either
+  provider_tier: union_rate
+  evidence: fetched
+  date: 2026-01
+  url: https://www.bvft.de/wp-content/uploads/2026/04/bvft_Gagenempfehlung-Set-und-Postproduktion_01.2026.pdf
+  notes: minimum, 10 h day, excl. studio rental and rights; documentary low-budget 484
+- id: bvft-mixer-ads-de
+  specialty: av_production
+  offering: crew_day_rate
+  provider: bvft Gagenempfehlung 2026 (re-recording mixer, advertising, invoiced)
+  region: DE
+  price: 598
+  currency: EUR
+  unit: per_day
+  delivery: either
+  provider_tier: union_rate
+  evidence: fetched
+  date: 2026-01
+  url: https://www.bvft.de/wp-content/uploads/2026/04/bvft_Gagenempfehlung-Set-und-Postproduktion_01.2026.pdf
+  notes: minimum; documentary low-budget 486; sound editor ads 474
+- id: sntpct-anim-realisateur-fr
+  specialty: av_production
+  offering: crew_day_rate
+  provider: CCN Production de films d'animation (réalisateur)
+  region: FR
+  price: 201.63
+  currency: EUR
+  unit: per_day
+  delivery: either
+  provider_tier: union_rate
+  evidence: fetched
+  date: 2024-07
+  url: https://sntpct.fr/wp-content/uploads/2020/07/SNTPCT_Films_Animation_Salaires_minima_garantis_au_1er_juillet_2024.pdf
+  notes: salaried gross minimum, 7 h day; weekly 35 h 1008.13; excludes author rights and employer charges
+- id: sntpct-anim-chefmonteur-fr
+  specialty: av_production
+  offering: crew_day_rate
+  provider: CCN Production de films d'animation (chef monteur image son animatique)
+  region: FR
+  price: 214.13
+  currency: EUR
+  unit: per_day
+  delivery: either
+  provider_tier: union_rate
+  evidence: fetched
+  date: 2024-07
+  url: https://sntpct.fr/wp-content/uploads/2020/07/SNTPCT_Films_Animation_Salaires_minima_garantis_au_1er_juillet_2024.pdf
+  notes: salaried gross minimum; storyboarder 156.21; chef étalonneur 144.85; ingénieur du son 144.86
+- id: pcam-composer-production-day
+  specialty: av_production
+  offering: crew_day_rate
+  provider: PCAM helpdesk member (composer production)
+  region: UK
+  price: 1800
+  currency: GBP
+  unit: per_day
+  delivery: either
+  provider_tier: established
+  evidence: fetched
+  date: 2025
+  url: https://www.pcam.co.uk/wp-content/uploads/2025/05/PCAM-Helpdesk-QAs-Vol-5-2025.pdf
+  notes: one member's production day rate; 250/h
+- id: pcam-composition-fee
+  specialty: av_production
+  offering: music_original_score
+  provider: PCAM helpdesk guidance
+  region: UK
+  price_low: 1500
+  price_high: 6000
+  currency: GBP
+  unit: per_project
+  delivery: n/a
+  provider_tier: established
+  evidence: fetched
+  date: 2025
+  url: https://www.pcam.co.uk/wp-content/uploads/2025/05/PCAM-Helpdesk-QAs-Vol-5-2025.pdf
+  notes: composition fee for a commercial (one member 4000); usage licensed on top (e.g. Germany+Benelux 3 months 2250; one-year internet 600% of composition fee); average UK TV+internet commercial music 15000-25000
+- id: pcam-commercial-music-total
+  specialty: av_production
+  offering: music_original_score
+  provider: PCAM helpdesk guidance
+  region: UK
+  price_low: 1500
+  price_high: 25000
+  currency: GBP
+  unit: per_project
+  delivery: n/a
+  provider_tier: established
+  evidence: snippet
+  url: https://www.pcam.co.uk/?p=4423
+  notes: total music fees for a UK commercial incl. production, composition, usage; pitch fees 750-1000 per company
+- id: sync-local-indie
+  specialty: av_production
+  offering: music_licence
+  provider: Foxi Music guide
+  region: US
+  price_low: 500
+  price_high: 2500
+  currency: USD
+  unit: per_project
+  delivery: n/a
+  provider_tier: agency
+  evidence: snippet
+  date: 2026
+  url: https://www.foximusic.com/blog/how-much-does-it-cost-to-license-music-for-a-commercial/
+  notes: sync fee, local ad, indie track; master licence separate; national well-known song 5000-250000
+- id: upwork-ai-video-hourly
+  specialty: av_production
+  offering: crew_day_rate
+  provider: Upwork AI video specialists (genra.ai guide)
+  region: global
+  price_low: 50
+  price_high: 120
+  currency: USD
+  unit: per_hour
+  delivery: online
+  provider_tier: freelancer
+  evidence: snippet
+  date: 2026
+  url: https://genra.ai/blog/ai-video-freelancer-business-guide
+  notes: vendor blog
+- id: tool-veo31-standard
+  specialty: av_production
+  offering: generation_tool
+  provider: Google Veo 3.1 Standard (Gemini API)
+  region: global
+  price: 0.40
+  currency: USD
+  unit: per_finished_second
+  delivery: online
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://ai.google.dev/gemini-api/docs/pricing
+  notes: per generated second (not finished), 720p/1080p with audio; 4K 0.60; Fast 0.10-0.30; Lite 0.05-0.08
+- id: tool-runway-gen45
+  specialty: av_production
+  offering: generation_tool
+  provider: Runway Gen-4.5 (API)
+  region: global
+  price: 0.12
+  currency: USD
+  unit: per_finished_second
+  delivery: online
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://docs.dev.runwayml.com/guides/pricing/
+  notes: per generated second; 12 credits/s at 0.01/credit; Kling 3.0 Pro with audio 17 cr/s; Veo 3.1 40 cr/s; ProRes +5, HDR +20 cr/s
+- id: tool-sora2-pro-1080p
+  specialty: av_production
+  offering: generation_tool
+  provider: OpenAI Sora 2 Pro (API)
+  region: global
+  price: 0.70
+  currency: USD
+  unit: per_finished_second
+  delivery: online
+  provider_tier: established
+  evidence: secondary
+  date: 2026-09
+  url: https://benchlm.ai/md/media-pricing/sora.md
+  notes: per generated second at 1080p; Sora 2 0.10 (720p); reported shut down 2026-09-24
+- id: tool-luma-ray-1080p
+  specialty: av_production
+  offering: generation_tool
+  provider: Luma Ray3.2 (Plus plan)
+  region: global
+  price: 30
+  currency: USD
+  unit: per_month
+  delivery: online
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://lumalabs.ai/pricing
+  notes: 10000 credits/month; 1080p 80 credits/s, 720p 20, draft 4; Pro 90/40000, Ultra 300/150000
+- id: tool-elevenlabs-creator
+  specialty: av_production
+  offering: generation_tool
+  provider: ElevenLabs Creator
+  region: global
+  price: 22
+  currency: USD
+  unit: per_month
+  delivery: online
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://elevenlabs.io/pricing
+  notes: 121000 credits (~121 min TTS); music 900 credits/min; Pro 99/600000
+- id: tool-suno-premier
+  specialty: av_production
+  offering: generation_tool
+  provider: Suno Premier
+  region: global
+  price: 24
+  currency: USD
+  unit: per_month
+  delivery: online
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://suno.com/pricing
+  notes: 10000 credits, commercial use; Pro 8/month 2500 credits

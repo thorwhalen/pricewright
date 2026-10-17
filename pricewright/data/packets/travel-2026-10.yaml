@@ -1,0 +1,662 @@
+# Travel comparables packet (pricewright research packet v0.1), specialty: travel. Observed 2026-10-17.
+# Ratios (share of day rate, markup, online factor) use unit: percent. Unknown fields omitted.
+
+# --- Travel time billing ---
+- id: apa-crew-travel-time-working-day
+  specialty: travel
+  offering: travel_time
+  provider: APA Recommended Crew Terms
+  region: UK
+  price: 100
+  unit: percent
+  delivery: onsite
+  provider_tier: union_rate
+  evidence: fetched
+  date: 2018-07
+  url: https://www.a-p-a.net/content/uploads/2018/06/APA-Recommended-Crew-Terms-July-2018-FULL-copy.pdf
+  notes: Travel paid at single (basic hourly) time, less the first hour of outward and homeward journey. No travel pay if travel+work under 11 h.
+- id: apa-crew-travel-day-minimum
+  specialty: travel
+  offering: travel_day
+  provider: APA Recommended Crew Terms
+  region: UK
+  price: 5
+  unit: per_hour
+  delivery: onsite
+  provider_tier: union_rate
+  evidence: fetched
+  date: 2018-07
+  url: https://www.a-p-a.net/content/uploads/2018/06/APA-Recommended-Crew-Terms-July-2018-FULL-copy.pdf
+  notes: price = minimum paid hours (5) at basic hourly rate on a non-shooting travel day. Flight >4 h no shooting that day; >8 h no shooting for 24 h after arrival.
+- id: iatse-commercial-travel-day
+  specialty: travel
+  offering: travel_day
+  provider: AICP-IATSE commercial agreement (via Wrapbook)
+  region: US
+  price_low: 4
+  price_high: 8
+  unit: per_hour
+  delivery: onsite
+  provider_tier: union_rate
+  evidence: fetched
+  date: 2022-04
+  url: https://www.wrapbook.com/blog/inside-the-zone-vs-outside-budgeting-travel
+  notes: Hours paid at straight time on travel-only days (min 4, max 8). Daily housing-to-set travel over 1 h is work time. Air not less than coach.
+- id: ddpractical-travel-day-half-rate
+  specialty: travel
+  offering: travel_day
+  provider: DD Practical (freelance crew)
+  region: UK
+  price: 50
+  unit: percent
+  delivery: onsite
+  provider_tier: freelancer
+  evidence: fetched
+  date: 2026-10
+  url: https://www.practical.org.uk/freelance-terms/
+  notes: Travel days at half day rate; all travel time counts toward day-rate hours (12 h day).
+- id: lisapritchard-photo-travel-day
+  specialty: travel
+  offering: travel_day
+  provider: Lisa Pritchard Agency (photographers)
+  region: UK
+  price: 50
+  unit: percent
+  delivery: onsite
+  provider_tier: agency
+  evidence: fetched
+  date: 2026-10
+  url: https://www.lisapritchard.com/blog/ask-an-agent-how-much-to-charge-for-travel-time
+  notes: Travel fee roughly 50% of basic shoot rate; no travel fee for local (within M25) shoots; mileage and parking on top.
+- id: forums-crew-travel-day-range
+  specialty: travel
+  offering: travel_day
+  provider: Cinematography.com / DPReview / MetaFilter forum reports
+  region: global
+  price_low: 50
+  price_high: 75
+  unit: percent
+  delivery: onsite
+  provider_tier: freelancer
+  evidence: snippet
+  date: 2026-10
+  url: https://cinematography.com/index.php?%2Fforums%2Ftopic%2F63116-travel-day-rate%2F=
+  notes: Camera operators at 50%; photographers 70% when flying; hirers pay 50-75%.
+- id: talan-consultant-travel-time
+  specialty: travel
+  offering: travel_time
+  provider: Talan
+  region: global
+  price_low: 50
+  price_high: 100
+  unit: percent
+  delivery: onsite
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://www.talan.com/americas/en/about-us/contractual-policies/travel-and-expense-policy
+  notes: First hour of each commute never billable; 100-150 km beyond first hour at 50%; >150 km 50% outside / 100% inside business hours.
+- id: consultant-travel-time-us-guides
+  specialty: travel
+  offering: travel_time
+  provider: Harvest / Everhour guides
+  region: US
+  price_low: 50
+  price_high: 75
+  unit: percent
+  delivery: onsite
+  provider_tier: freelancer
+  evidence: snippet
+  date: 2026-10
+  url: https://www.getharvest.com/time-tracking/how-to-charge-for-travel-time-as-a-contractor
+  notes: Travel time typically billed at 50-75% of hourly rate; law firms often full rate.
+- id: bdu-consulting-travel-time-included
+  specialty: travel
+  offering: travel_time
+  provider: BDU Honorarstudie (about 190 consultancies)
+  region: DE
+  delivery: onsite
+  provider_tier: institution
+  evidence: snippet
+  date: 2023-01
+  url: https://www.bdu.de/media/356786/honorarstudie_reise-und-nebenkosten.pdf
+  notes: Almost half include travel time in the day fee; 1 in 3 bill part of it; 1 in 5 bill it fully.
+- id: lefreelance-forfait-trajet-example
+  specialty: travel
+  offering: travel_time
+  provider: Le Freelance (worked example)
+  region: FR
+  price: 150
+  currency: EUR
+  unit: per_event
+  delivery: onsite
+  provider_tier: freelancer
+  evidence: fetched
+  date: 2026-10
+  url: https://lefreelance.fr/articles/facturer-temps-trajet-freelance/
+  notes: 'Example only: 600 EUR HT/day, 2 h round trip billed at hourly equivalent 75 EUR = 150 EUR per visit. Article says a reduced travel rate is allowed; short local trips may go unbilled.'
+
+# --- Speakers travel ---
+- id: keyspeakers-travel-buyout
+  specialty: travel
+  offering: travel_buyout
+  provider: Key Speakers Bureau
+  region: US
+  price_low: 1000
+  price_high: 5000
+  currency: USD
+  unit: per_event
+  delivery: onsite
+  provider_tier: bureau
+  evidence: fetched
+  date: 2026-10
+  url: https://keyspeakers.com/blog/how-much-do-motivational-speakers-cost/
+  notes: Flat buyout covers flights and home-city ground transport; client books hotel and event-city transport. Alternative is speaker invoicing at cost.
+- id: speaking-com-international-uplift
+  specialty: travel
+  offering: international_uplift
+  provider: SPEAKING.com
+  region: US
+  price_low: 50
+  price_high: 100
+  unit: percent
+  delivery: onsite
+  provider_tier: bureau
+  evidence: fetched
+  date: 2026-10
+  url: https://speaking.com/speakers-bureau-services-faqs
+  notes: International fees generally 50-100% higher due to extra travel time; travel and lodging in addition to honorarium; flat travel fee negotiable.
+- id: sbc-hotel-cap-standard-city
+  specialty: travel
+  offering: hotel_cap
+  provider: Speakers Bureau of Canada
+  region: CA
+  price: 250
+  currency: CAD
+  unit: per_night
+  delivery: onsite
+  provider_tier: bureau
+  evidence: fetched
+  date: 2026
+  url: https://speakerscanada.com/travel-expenses/
+  notes: Plus tax; big cities up to CAD 400. Morning events require arrival evening before; same-day drive only if start after 11:00; avoid >4 h travel per day; >3 h away favours overnight. Highest economy air; business for fees >= CAD 25k.
+- id: sbc-per-diem
+  specialty: travel
+  offering: per_diem
+  provider: Speakers Bureau of Canada
+  region: CA
+  price: 150
+  currency: CAD
+  unit: per_day
+  delivery: onsite
+  provider_tier: bureau
+  evidence: fetched
+  date: 2026
+  url: https://speakerscanada.com/travel-expenses/
+  notes: Meals plus CAD 30 incidentals; page internally inconsistent on meal total. Own car CAD 0.73/km round trip if >25 km.
+
+# --- Per diems: official ---
+- id: urssaf-2026-repas-restaurant
+  specialty: travel
+  offering: per_diem
+  provider: URSSAF
+  region: FR
+  price: 21.40
+  currency: EUR
+  unit: per_event
+  delivery: onsite
+  provider_tier: government
+  evidence: snippet
+  date: 2026
+  url: https://www.urssaf.fr/accueil/employeur/beneficier-exonerations/frais-professionnels.html
+  notes: Per meal, restaurant while travelling (also grand deplacement meal, first 3 months). Meal outside restaurant 10.40 EUR. Corroborated by bmfiduciaire (fetched).
+- id: urssaf-2026-logement-province
+  specialty: travel
+  offering: hotel_flat
+  provider: URSSAF
+  region: FR
+  price: 56.80
+  currency: EUR
+  unit: per_night
+  delivery: onsite
+  provider_tier: government
+  evidence: snippet
+  date: 2026
+  url: https://www.urssaf.fr/accueil/employeur/beneficier-exonerations/frais-professionnels.html
+  notes: Lodging + breakfast, grand deplacement first 3 months, departements outside Paris/92/93/94. Grand deplacement presumed if >=50 km and >=1h30 by public transport.
+- id: urssaf-2026-logement-paris
+  specialty: travel
+  offering: hotel_flat
+  provider: URSSAF
+  region: FR
+  price: 76.60
+  currency: EUR
+  unit: per_night
+  delivery: onsite
+  provider_tier: government
+  evidence: snippet
+  date: 2026
+  url: https://www.urssaf.fr/accueil/employeur/beneficier-exonerations/frais-professionnels.html
+  notes: Paris, 92, 93, 94; first 3 months.
+- id: idcc3097-indemnite-repas
+  specialty: travel
+  offering: per_diem
+  provider: Convention collective production cinematographique et publicite (IDCC 3097)
+  region: FR
+  price: 18.56
+  currency: EUR
+  unit: per_event
+  delivery: onsite
+  provider_tier: union_rate
+  evidence: snippet
+  date: 2024
+  url: https://presse.tripalio.fr/wp-content/uploads/2024/09/IDCC-3097-Accord-salaires-techniciens.pdf
+  notes: Meal allowance per meal; casse-croute 7.54 EUR.
+- id: de-2026-verpflegung-8h
+  specialty: travel
+  offering: per_diem
+  provider: German tax law (EStG) via Taxmaro
+  region: DE
+  price: 14
+  currency: EUR
+  unit: per_day
+  delivery: onsite
+  provider_tier: government
+  evidence: fetched
+  date: 2026
+  url: https://www.taxmaro.com/post/reisekostenpauschalen-2026
+  notes: More than 8 h away, or arrival/departure day. Nothing up to 8 h. Reductions if meals provided - breakfast 5.60, lunch/dinner 11.20 each.
+- id: de-2026-verpflegung-24h
+  specialty: travel
+  offering: per_diem
+  provider: German tax law (EStG) via Taxmaro
+  region: DE
+  price: 28
+  currency: EUR
+  unit: per_day
+  delivery: onsite
+  provider_tier: government
+  evidence: fetched
+  date: 2026
+  url: https://www.taxmaro.com/post/reisekostenpauschalen-2026
+  notes: Full 24 h day away.
+- id: de-2026-uebernachtung-pauschale
+  specialty: travel
+  offering: hotel_flat
+  provider: German tax law via Taxmaro
+  region: DE
+  price: 20
+  currency: EUR
+  unit: per_night
+  delivery: onsite
+  provider_tier: government
+  evidence: fetched
+  date: 2026
+  url: https://www.taxmaro.com/post/reisekostenpauschalen-2026
+  notes: Flat without receipts; actual hotel reimbursable with receipt (breakfast 5.60 deducted).
+- id: hmrc-benchmark-5h
+  specialty: travel
+  offering: per_diem
+  provider: HMRC benchmark scale rates
+  region: UK
+  price: 5
+  currency: GBP
+  unit: per_day
+  delivery: onsite
+  provider_tier: government
+  evidence: snippet
+  date: 2026
+  url: https://www.gov.uk/hmrc-internal-manuals/employment-income-manual/eim30240
+  notes: Qualifying travel >=5 h; 10 GBP >=10 h; 25 GBP >=15 h and past 8 pm; +10 GBP supplement when 5 h/10 h journey runs past 8 pm. No HMRC overnight benchmark (EIM05231, fetched).
+- id: hmrc-benchmark-15h
+  specialty: travel
+  offering: per_diem
+  provider: HMRC benchmark scale rates
+  region: UK
+  price: 25
+  currency: GBP
+  unit: per_day
+  delivery: onsite
+  provider_tier: government
+  evidence: snippet
+  date: 2026
+  url: https://www.gov.uk/hmrc-internal-manuals/employment-income-manual/eim30240
+  notes: 15 h or more, travel ongoing after 8 pm.
+- id: eu-commission-fr-daily
+  specialty: travel
+  offering: per_diem
+  provider: European Commission mission scale
+  region: FR
+  price: 127
+  currency: EUR
+  unit: per_day
+  delivery: onsite
+  provider_tier: government
+  evidence: fetched
+  date: 2025
+  url: https://euemployment.eu/european-commission-mission-allowances-and-hotel-ceilings/
+  notes: Hotel ceiling 212 EUR. Secondary source; also attributed to Delegated Reg (EU) 2025/693 (snippet); dating unresolved.
+- id: eu-commission-de-daily
+  specialty: travel
+  offering: per_diem
+  provider: European Commission mission scale
+  region: DE
+  price: 123
+  currency: EUR
+  unit: per_day
+  delivery: onsite
+  provider_tier: government
+  evidence: fetched
+  date: 2025
+  url: https://euemployment.eu/european-commission-mission-allowances-and-hotel-ceilings/
+  notes: Hotel ceiling 154 EUR.
+- id: eu-commission-nl-daily
+  specialty: travel
+  offering: per_diem
+  provider: European Commission mission scale
+  region: NL
+  price: 137
+  currency: EUR
+  unit: per_day
+  delivery: onsite
+  provider_tier: government
+  evidence: fetched
+  date: 2025
+  url: https://euemployment.eu/european-commission-mission-allowances-and-hotel-ceilings/
+  notes: Hotel ceiling 190 EUR. Belgium 132 / 171.
+- id: gsa-fy2027-lodging
+  specialty: travel
+  offering: hotel_cap
+  provider: US GSA per diem FY2027
+  region: US
+  price: 113
+  currency: USD
+  unit: per_night
+  delivery: onsite
+  provider_tier: government
+  evidence: fetched
+  date: 2026-10
+  url: https://texaslodging.com/fy-2027-per-diem-rates/
+  notes: Standard CONUS ceiling, 1 Oct 2026 - 30 Sep 2027 (FY2026 was 110). Secondary source citing GSA FTR 27-01.
+- id: gsa-fy2027-mie
+  specialty: travel
+  offering: per_diem
+  provider: US GSA per diem FY2027
+  region: US
+  price: 68
+  currency: USD
+  unit: per_day
+  delivery: onsite
+  provider_tier: government
+  evidence: fetched
+  date: 2026-10
+  url: https://texaslodging.com/fy-2027-per-diem-rates/
+  notes: Standard CONUS M&IE; non-standard areas 68-92.
+- id: talan-per-diem
+  specialty: travel
+  offering: per_diem
+  provider: Talan
+  region: US
+  price: 100
+  currency: USD
+  unit: per_day
+  delivery: onsite
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://www.talan.com/americas/en/about-us/contractual-policies/travel-and-expense-policy
+  notes: Breakfast 20, lunch 25, dinner 55. Lodging billed for multi-day trips >1h30 one-way. Air/rail at non-refundable economy. No markup stated.
+
+# --- Mileage ---
+- id: fr-bareme-km-5cv
+  specialty: travel
+  offering: mileage
+  provider: Bareme kilometrique (impots)
+  region: FR
+  price: 0.636
+  currency: EUR
+  unit: per_km
+  delivery: onsite
+  provider_tier: government
+  evidence: fetched
+  date: 2026
+  url: https://www.moneyvox.fr/impot/actualites/108318/impots-2026-le-bareme-kilometrique-est-gele-pour-la-3eme-annee-consecutive
+  notes: Up to 5000 km/yr; 7 CV+ 0.697; 3 CV 0.529; frozen since 2023; electric +20%.
+- id: uk-amap-car
+  specialty: travel
+  offering: mileage
+  provider: HMRC approved mileage allowance
+  region: UK
+  price: 0.45
+  currency: GBP
+  unit: per_km
+  delivery: onsite
+  provider_tier: government
+  evidence: snippet
+  date: 2026
+  url: https://www.legislation.gov.uk/uksi/2011/896/made/data.html
+  notes: 'UNIT IS PER MILE (schema has no per_mile): 45p first 10,000 miles, 25p after; unchanged since 2011.'
+- id: apa-crew-mileage
+  specialty: travel
+  offering: mileage
+  provider: APA Recommended Crew Terms
+  region: UK
+  price: 0.50
+  currency: GBP
+  unit: per_km
+  delivery: onsite
+  provider_tier: union_rate
+  evidence: fetched
+  date: 2018-07
+  url: https://www.a-p-a.net/content/uploads/2018/06/APA-Recommended-Crew-Terms-July-2018-FULL-copy.pdf
+  notes: 'UNIT IS PER MILE: 50p/mile, not payable within M25. Bectu commercials 2021: 51p (snippet); DD Practical 55p (fetched).'
+- id: de-km-dienstreise
+  specialty: travel
+  offering: mileage
+  provider: German tax law via Taxmaro
+  region: DE
+  price: 0.30
+  currency: EUR
+  unit: per_km
+  delivery: onsite
+  provider_tier: government
+  evidence: fetched
+  date: 2026
+  url: https://www.taxmaro.com/post/reisekostenpauschalen-2026
+  notes: Per km actually driven (both directions), business trips.
+- id: nl-km-2026
+  specialty: travel
+  offering: mileage
+  provider: Belastingdienst (via Moore DRV)
+  region: NL
+  price: 0.25
+  currency: EUR
+  unit: per_km
+  delivery: onsite
+  provider_tier: government
+  evidence: fetched
+  date: 2026
+  url: https://www.moore-drv.nl/onbelaste-reiskostenvergoeding-2026/
+  notes: Untaxed maximum from 1 Jan 2026 (retroactive), was 0.23.
+- id: irs-2026-mileage
+  specialty: travel
+  offering: mileage
+  provider: IRS
+  region: US
+  price: 0.725
+  currency: USD
+  unit: per_km
+  delivery: onsite
+  provider_tier: government
+  evidence: fetched
+  date: 2026-01
+  url: https://www.irs.gov/newsroom/irs-sets-2026-business-standard-mileage-rate-at-725-cents-per-mile-up-25-cents
+  notes: 'UNIT IS PER MILE: 72.5 c (2025: 70 c). A rise to 76 c from 1 Jul 2026 is reported by IFEBP (snippet, not verified on irs.gov).'
+
+# --- Markup ---
+- id: bdu-travel-surcharge
+  specialty: travel
+  offering: expense_markup
+  provider: BDU Honorarstudie
+  region: DE
+  price: 11
+  unit: percent
+  delivery: onsite
+  provider_tier: institution
+  evidence: snippet
+  date: 2023-01
+  url: https://www.bdu.de/media/356786/honorarstudie_reise-und-nebenkosten.pdf
+  notes: Average travel-cost surcharge 11% per consultant day (a lump-sum alternative to at-cost, not a markup on receipts). 1 in 3 bill travel costs as a lump sum, ~1 in 5 as a percentage, 21% include them in the fee.
+- id: aicp-handling-cap
+  specialty: travel
+  offering: expense_markup
+  provider: AICP analysis of advertiser bid terms
+  region: US
+  price: 15
+  unit: percent
+  delivery: onsite
+  provider_tier: institution
+  evidence: snippet
+  date: 2026-10
+  url: https://aicp.com/assets/editor/HeinekenRosterCriteriaCombinedAICPAnalysis_FINAL.pdf
+  notes: Maximum handling fee on cost-plus items in an advertiser's bid terms, as analysed by AICP.
+
+# --- Minimums ---
+- id: uk-trainer-half-day
+  specialty: travel
+  offering: half_day
+  provider: UK training suppliers (G-Cloud 14 price sheets)
+  region: UK
+  price_low: 50
+  price_high: 51
+  unit: percent
+  delivery: onsite
+  provider_tier: established
+  evidence: snippet
+  date: 2024-05
+  url: https://assets.applytosupply.digitalmarketplace.service.gov.uk/g-cloud-14/documents/721195/437721975530782-pricing-document-2024-05-05-2322.pdf
+  notes: Half day 900 vs day 1750 GBP; 1000 vs 2000 GBP + VAT; travel extra. Which sheet holds which figure not verified.
+
+# --- Cancellation ---
+- id: apa-crew-cancel-6-4d
+  specialty: travel
+  offering: cancellation
+  provider: APA Recommended Crew Terms
+  region: UK
+  price: 50
+  unit: percent
+  delivery: onsite
+  provider_tier: union_rate
+  evidence: fetched
+  date: 2018-07
+  url: https://www.a-p-a.net/content/uploads/2018/06/APA-Recommended-Crew-Terms-July-2018-FULL-copy.pdf
+  notes: Tiers - >=7 days 0%; 6-4 days 50%; 3-2 days 75%; day prior 100%. Engagements <=3 days cancelled as a whole.
+- id: ddpractical-cancel
+  specialty: travel
+  offering: cancellation
+  provider: DD Practical (freelance crew)
+  region: UK
+  price: 50
+  unit: percent
+  delivery: onsite
+  provider_tier: freelancer
+  evidence: fetched
+  date: 2026-10
+  url: https://www.practical.org.uk/freelance-terms/
+  notes: Tiers - <2 weeks 25%; <7 days 50%; <48 h 100%.
+- id: keyspeakers-deposit
+  specialty: travel
+  offering: deposit
+  provider: Key Speakers Bureau
+  region: US
+  price: 50
+  unit: percent
+  delivery: onsite
+  provider_tier: bureau
+  evidence: fetched
+  date: 2026-10
+  url: https://keyspeakers.com/blog/how-much-do-motivational-speakers-cost/
+  notes: 50% deposit with signed agreement, balance >=2 weeks before; full payment soon after signing if the event is within a month.
+- id: speaker-bureau-cancel-60d
+  specialty: travel
+  offering: cancellation
+  provider: Simon & Shuster Speakers Bureau contract (public record)
+  region: US
+  price: 100
+  unit: percent
+  delivery: onsite
+  provider_tier: bureau
+  evidence: snippet
+  date: 2023
+  url: https://lfportal.everettwa.gov/WebLink/0/edoc/1607382/Simon%20%20Shuster%20Speakers%20Bureau%201282023.pdf
+  notes: Deposit forfeited if cancelled >60 days out; full fee due if <=60 days.
+
+# --- Online vs on-site ---
+- id: bernoff-inperson-premium
+  specialty: travel
+  offering: onsite_premium
+  provider: Josh Bernoff (workshops)
+  region: US
+  price: 2000
+  currency: USD
+  unit: per_event
+  delivery: onsite
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://bernoff.com/blog/should-workshops-cost-more-in-person
+  notes: In-person premium plus travel; online price not discounted (same value). Online 2x90 min vs 3.5-4 h; groups 20 online vs 40 in person.
+- id: intersystems-virtual-vs-onsite
+  specialty: travel
+  offering: online_factor
+  provider: InterSystems (training)
+  region: US
+  price: 121
+  unit: percent
+  delivery: online
+  provider_tier: established
+  evidence: snippet
+  date: 2026-10
+  url: https://intersystems.com/request-virtual-classroom-training-for-your-company
+  notes: One-day class 3400 USD virtual vs 2800 USD in-person (virtual = 121% of on-site).
+- id: keynote-virtual-factor-range
+  specialty: travel
+  offering: online_factor
+  provider: US speakers bureaus (BigSpeak, All American, Futurist Speakers, Executive Speakers)
+  region: US
+  price_low: 50
+  price_high: 100
+  unit: percent
+  delivery: online
+  provider_tier: bureau
+  evidence: snippet
+  date: 2026-10
+  url: https://www.allamericanspeakers.com/blog/what-we-learned-about-virtual-events-in-2020/amp/
+  notes: Reports of ~50%, ~70% (2020 experience), 60-90%, 75-100% of in-person fee.
+- id: keyspeakers-virtual-discount
+  specialty: travel
+  offering: online_factor
+  provider: Key Speakers Bureau
+  region: US
+  price_low: 50
+  price_high: 90
+  unit: percent
+  delivery: online
+  provider_tier: bureau
+  evidence: fetched
+  date: 2026-10
+  url: https://keyspeakers.com/blog/how-much-do-motivational-speakers-cost/
+  notes: Virtual "10-50% cheaper than in person rates" (factor 50-90%).
+- id: bdu-remote-day-rates
+  specialty: travel
+  offering: online_factor
+  provider: BDU Honorarstudie
+  region: DE
+  price: 12
+  unit: percent
+  delivery: online
+  provider_tier: institution
+  evidence: snippet
+  date: 2023-01
+  url: https://www.bdu.de/media/356786/honorarstudie_reise-und-nebenkosten.pdf
+  notes: price = share of consultancies (12%) offering specific remote day rates; size of the remote discount not given.

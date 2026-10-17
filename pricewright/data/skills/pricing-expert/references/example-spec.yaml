@@ -1,0 +1,123 @@
+title: Two-person creative studio — training rate card (example)
+currency: EUR
+rates:
+  day_rates: {founder: 900}     # INPUT: founders' target day rate. Research band for the studio 800-1,200
+  hours_per_day: 7
+inputs:
+  - {input: "Founders' target day rate", default: "900 EUR per 7-h day (129 EUR/h), same for both founders", why: "Research band for this studio 800-1,200 (France TJM median ~795, AI-expert trainers 1,100-1,800, BDVT 1,200-2,000). Better derived from income: day_rate_from_income(income, billable_days=100-120)."}
+  - {input: "Runs to amortise development over", default: "talk 10, workshop 6, course 4, series 4", why: "The main reason a talk costs more per hour than a day. Fewer expected runs -> higher prices."}
+  - {input: "Development ratio (h per delivered h)", default: "talk 40, workshop 8, course 8 per live h, series 6", why: "Practitioner evidence: talk 20-60, workshop 3-20, live online 3-15."}
+  - {input: "Expected paid fill of open sessions", default: "workshop 9 of 12, course 8 of 12, series 8 of 12", why: "Open prices are divided by expected seats, never by the cap. Break-even seats are shown per offering."}
+  - {input: "Tailoring per booking", default: "standard talk 4 h, keynote 10 h, private day 4 h + 2 h scoping", why: "Market: 4-12 h for a talk, 6-10 h for a keynote; ~1:1 for re-running a workshop."}
+  - {input: "Second facilitator", default: "above 12 hands-on participants", why: "Practice: 1 facilitator per 5-8 interactive participants, co-facilitation from ~12."}
+  - {input: "Credits per participant-day", default: "20 EUR", why: "The studio's generation accounts during hands-on work; replace with real usage."}
+  - {input: "Positioning (launch discount)", default: "1.0 except course 0.77 and series 0.70", why: "Set where the cost-based price is above the market's p90; the card shows the effective day rate this accepts."}
+  - {input: "Travel policy", default: "1 h each way free, then 50% of hourly rate; travel-only day 4 h min, half-day cap; nights by rule; expenses at cost", why: "APA crew terms, consultancies, speaker bureaus, URSSAF (travel-practice.md)."}
+  - {input: "Home city", default: "Paris (venue 650/day)", why: "Sets venue cost and which trips are local."}
+market:
+  packets: [training-2026-10.yaml]   # baseline packet in pricewright/data/packets/
+  fx: {USD: 0.86, GBP: 1.15, NZD: 0.50, SGD: 0.66}   # assumed Oct 2026; value of 1 unit in EUR
+  exclude_tiers: [celebrity, bureau]
+sensitivity:
+  day_rates: [700, 900, 1100]
+travel:
+  policy: {}                    # defaults from travel-practice.md
+  scenarios:
+    - {name: "Same city (Paris to Paris)", trip: {one_way_hours: 0.75}}
+    - {name: "2 h by train, 1 person, talk", trip: {one_way_hours: 2.0, transport_round_trip: 150, travellers: 1, start_hour: 14}}
+    - {name: "2 h by train, 2 people, 1-day workshop", trip: {one_way_hours: 2.0, transport_round_trip: 150, travellers: 2}}
+    - {name: "3.5 h by train, 2 people, 1 day", trip: {one_way_hours: 3.5, transport_round_trip: 220, travellers: 2}}
+    - {name: "Short-haul flight (5 h door to door), 2 people, 2 days", trip: {one_way_hours: 5, transport_round_trip: 320, travellers: 2, working_days: 2}}
+    - {name: "Short-haul flight (5 h door to door), 1 person, talk", trip: {one_way_hours: 5, transport_round_trip: 320, travellers: 1}}
+offerings:
+  - id: talk_online
+    specialty: training
+    template: talk
+    params: {delivery: online}
+    name: "Talk, online (60 min + 15 min Q&A)"
+    rationale: "Why a talk costs more per stage hour than a workshop: 75 minutes on screen sit on about 11 hours of work (a 40-hour talk spread over 10 bookings, 4 hours tailoring, organiser calls, rehearsal). Per hour actually worked it pays exactly what every other offering pays. Market: a talk is 0.25-0.45 of the same person's full-day fee; here it is 0.25 of the private day."
+    market: {offerings: [talk, talk_online, keynote], delivery: [online, either]}
+  - id: talk_onsite
+    specialty: training
+    template: talk
+    params: {delivery: onsite}
+    name: "Talk, on site (60 min + 30 min Q&A)"
+    market: {offerings: [talk, keynote], delivery: [onsite, either]}
+  - id: keynote_onsite
+    specialty: training
+    template: talk
+    params: {delivery: onsite, customisation_hours: 10, admin_hours: 3}
+    name: "Tailored keynote, on site (conference or offsite)"
+    rationale: "A keynote written for one event: 10 hours of tailoring and more organiser time. Kept as its own line so the standard talk is not priced like it."
+    market: {offerings: [keynote, talk], delivery: [onsite, either]}
+  - id: ws_open
+    specialty: training
+    template: open_workshop
+    params: {cap: 12, expected: 9}
+    name: "Open workshop day, on site (7 h, 12 seats, one lead)"
+    rationale: "Twelve seats with one lead, at a Paris venue we arrange, lunch included. Priced at 9 paying seats: about 101 EUR per person-hour, at the market's median for one-day AI courses (Haufe, Dawan, Global Knowledge 100-125 EUR/h). A 16-seat version needs the second founder in the room and comes to ~830 EUR a seat."
+  - id: ws_private_onsite
+    specialty: training
+    template: private_workshop
+    params: {delivery: onsite, group: 16}
+    name: "Private workshop day, on site (7 h, up to 16, two leads)"
+  - id: ws_private_12
+    specialty: training
+    template: private_workshop
+    params: {delivery: onsite, group: 12}
+    name: "Private workshop day, on site (7 h, up to 12, one lead)"
+    rationale: "The same day for a smaller team needs one facilitator, which is most of the difference. French intra days by single trainers sit at 1,500-2,500 EUR; this is a hands-on day with generation credits and prep, priced on the studio's rate."
+  - id: ws_private_online
+    specialty: training
+    template: private_workshop
+    params: {delivery: online, group: 16}
+    name: "Private workshop, online (2 x 3.5 h, up to 16)"
+  - id: ws_private_half
+    specialty: training
+    template: private_workshop
+    params: {delivery: onsite, group: 16, contact_hours: 3.5, customisation_hours: 3}
+    name: "Private half day, on site (3.5 h, up to 16)"
+    market: {offerings: [half_day]}
+  - id: course_open
+    specialty: training
+    template: online_course
+    params: {weeks: 4, session_hours: 3, office_hours_per_week: 1, cap: 12, expected: 8}
+    name: "Live online course, 4 weeks (16 h, 12 seats)"
+    positioning: 0.77
+    rationale: "At 8 paying seats and the full rate the course comes to about 1,500 EUR (94 EUR per person-hour), above every creative cohort in the packet (median ~23-50 EUR/h; corporate one-day AI courses 100-150). Launch price at 0.77 of cost-plus: ~1,150 EUR, which pays ~80% of the full rate at 8 seats and the full rate at about 10. Levers instead of discounting: fill 10+, fewer feedback hours, reuse over more cohorts."
+  - id: course_private
+    specialty: training
+    template: online_course
+    params: {weeks: 4, session_hours: 3, office_hours_per_week: 1, cap: 12, private: true}
+    name: "Private cohort for one team (16 h, up to 12)"
+    market: {offerings: [private_day], metric: per_contact_hour, value: per_contact_hour}
+  - id: series_open
+    specialty: training
+    template: series
+    params: {sessions: 3, session_hours: 2, cap: 12, expected: 8}
+    name: "Live series, 3 x 2 h (writers' room or music), 12 seats"
+    positioning: 0.70
+    rationale: "Same logic as the course. Cost-plus at 8 seats is ~560 EUR (93 EUR/person-hour); the packet's series median is ~39 EUR/h. Launch price at 0.70: ~390 EUR (65 EUR/h). Writing and music are one line because the format and hours are the same."
+  - id: series_private
+    specialty: training
+    template: private_series
+    params: {sessions: 3, session_hours: 2, group: 12}
+    name: "Private series for one team (3 x 2 h, up to 12)"
+    positioning: 0.94
+    rationale: "Cost-plus is ~4,800 EUR, but a private group must never cost more than all 12 seats of the open series (12 x 390 = 4,680), so it is capped just under that."
+    market: {offerings: [private_day, half_day], metric: per_contact_hour, value: per_contact_hour}
+  - id: coach_1
+    specialty: training
+    template: coaching
+    params: {sessions: 1}
+    name: "1:1 coaching, one 60-min session"
+  - id: coach_5
+    specialty: training
+    template: coaching
+    params: {sessions: 5}
+    name: "1:1 coaching, pack of 5"
+  - id: programme
+    specialty: training
+    template: team_programme
+    params: {workshop_days: 2, audit_days: 1, playbook_days: 3, checkins: 4, group: 16}
+    name: "Team programme (audit + 2 workshop days + playbook + day-30 review)"

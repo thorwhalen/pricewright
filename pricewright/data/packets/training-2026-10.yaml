@@ -1,0 +1,1310 @@
+# Training comparables packet (pricewright research packet v0.1). See SCHEMA.md and training-effort-and-market.md.
+# Items with notes starting "[R]" come from an earlier internal review; their evidence quality is marked per record.
+
+# ---------- Talks and keynotes ----------
+- id: speakeragency-uk-band-a
+  specialty: training
+  offering: keynote
+  provider: Speaker Agency UK (Band A, emerging voices and regional experts)
+  region: UK
+  price_low: 1000
+  price_high: 3000
+  currency: GBP
+  unit: per_event
+  contact_hours: 1
+  delivery: onsite
+  provider_tier: bureau
+  evidence: fetched
+  date: 2026
+  url: https://www.speakeragency.co.uk/blog/how-much-does-a-keynote-speaker-cost-2026
+  notes: 30-60 min keynote; Band B specialists 3000-7500; webinar 0.4-0.6x keynote; workshop 2-4h 1.5-2x; masterclass half/full day 3-4x; 6-10h tailoring prep per 45-min keynote; VAT, travel, distribution rights (+10-20%) extra
+- id: deutsche-startups-einsteiger
+  specialty: training
+  offering: keynote
+  provider: deutsche-startups.de speaker tiers (Einsteiger)
+  region: DE
+  price_low: 1000
+  price_high: 3000
+  currency: EUR
+  unit: per_event
+  delivery: onsite
+  provider_tier: new
+  evidence: fetched
+  date: 2019-05
+  url: https://www.deutsche-startups.de/2019/05/10/dein-weg-zum-keynote-speaker/
+  notes: guide for speakers, not a survey; Profi 3000-6000; known Profi 6000-12000
+- id: kaltura-virtual-guest-speaker
+  specialty: training
+  offering: talk_online
+  provider: Kaltura virtual speaker fee tiers (guest speakers)
+  region: global
+  price_low: 500
+  price_high: 2000
+  currency: USD
+  unit: per_event
+  delivery: online
+  provider_tier: new
+  evidence: fetched
+  url: https://corp.kaltura.com/blog/speaker-fees-for-virtual-events/
+  notes: virtual fees said to be 50-70% lower than in person; experienced keynote experts 5000-10000 virtual
+- id: billcole-keynote
+  specialty: training
+  offering: keynote
+  provider: Bill Cole (US speaker rate card)
+  region: US
+  price: 6500
+  currency: USD
+  unit: per_event
+  contact_hours: 1.5
+  delivery: onsite
+  provider_tier: established
+  evidence: fetched
+  date: 2025
+  url: https://www.mentalgamecoach.com/SpeakingFeesAndExpenses.html
+  notes: up to 90 min; virtual 50% less; international +50%; video recording +50% of fee, audio +33%
+- id: billcole-half-day
+  specialty: training
+  offering: half_day
+  provider: Bill Cole (US speaker rate card)
+  region: US
+  price: 10500
+  currency: USD
+  unit: per_group
+  contact_hours: 3.5
+  delivery: onsite
+  provider_tier: established
+  evidence: fetched
+  date: 2025
+  url: https://www.mentalgamecoach.com/SpeakingFeesAndExpenses.html
+  notes: 0.70 of full day; 1.6x keynote
+- id: billcole-full-day
+  specialty: training
+  offering: private_day
+  provider: Bill Cole (US speaker rate card)
+  region: US
+  price: 15000
+  currency: USD
+  unit: per_group
+  contact_hours: 6
+  delivery: onsite
+  provider_tier: established
+  evidence: fetched
+  date: 2025
+  url: https://www.mentalgamecoach.com/SpeakingFeesAndExpenses.html
+  notes: keynote is 0.43 of this; virtual 50% less
+- id: deoc-planner-talk
+  specialty: training
+  offering: talk
+  provider: US college DEI office (mailing list report of fees paid)
+  region: US
+  price_low: 1500
+  price_high: 2000
+  currency: USD
+  unit: per_event
+  contact_hours: 2
+  delivery: either
+  provider_tier: established
+  evidence: snippet
+  date: 2023-04
+  url: https://lists.ctc.edu/pipermail/deoc_lists.ctc.edu/2023-April/000694.html
+  notes: 90-120 min; same buyer paid half day 3000-4500 and full day 6000-7500 (split between two co-facilitators)
+- id: deoc-planner-full-day
+  specialty: training
+  offering: private_day
+  provider: US college DEI office (mailing list report of fees paid)
+  region: US
+  price_low: 6000
+  price_high: 7500
+  currency: USD
+  unit: per_group
+  delivery: either
+  provider_tier: established
+  evidence: snippet
+  date: 2023-04
+  url: https://lists.ctc.edu/pipermail/deoc_lists.ctc.edu/2023-April/000694.html
+  notes: split between two co-facilitators
+- id: hubertine-intervention
+  specialty: training
+  offering: talk
+  provider: Centre Hubertine Auclert (intervention at colloquium, round table)
+  region: FR
+  price: 500
+  currency: EUR
+  unit: per_event
+  delivery: onsite
+  provider_tier: institution
+  evidence: fetched
+  date: 2026-01
+  url: https://www.centre-hubertine-auclert.fr/sites/default/files/medias/Grille%20tarifs%20formation%202026.pdf
+  notes: non-member rate; member 200; non-profit public-sector grid
+- id: hubertine-3h-session
+  specialty: training
+  offering: half_day
+  provider: Centre Hubertine Auclert (sensibilisation collective, 3h max)
+  region: FR
+  price: 900
+  currency: EUR
+  unit: per_group
+  contact_hours: 3
+  delivery: onsite
+  provider_tier: institution
+  evidence: fetched
+  date: 2026-01
+  url: https://www.centre-hubertine-auclert.fr/sites/default/files/medias/Grille%20tarifs%20formation%202026.pdf
+  notes: non-member; member 400; 0.45 of the intra day
+- id: r-futurists-emerging
+  specialty: training
+  offering: keynote
+  provider: Futurists Speakers bureau tier (Emerging Professional)
+  region: US
+  price_low: 2500
+  price_high: 7500
+  currency: USD
+  unit: per_event
+  delivery: onsite
+  provider_tier: bureau
+  evidence: fetched
+  date: 2026-10
+  url: https://www.futuristsspeakers.com/?p=144065
+  notes: "[R] conference keynote via bureau"
+- id: r-futurists-ai-virtual
+  specialty: training
+  offering: talk_online
+  provider: Futurists Speakers, AI keynote price guide (virtual)
+  region: US
+  price_low: 5000
+  price_high: 15000
+  currency: USD
+  unit: per_event
+  delivery: online
+  provider_tier: bureau
+  evidence: fetched
+  date: 2026-10
+  url: https://www.futuristsspeakers.com/ai-keynote-speaker-price-cost-futurist/
+  notes: "[R] seller marketing page; overall 5000-50000"
+- id: r-bcm-keynote
+  specialty: training
+  offering: keynote
+  provider: Building Creative Machines
+  region: EU
+  price: 2000
+  currency: EUR
+  unit: per_event
+  contact_hours: 0.5
+  delivery: either
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://www.buildingcreativemachines.com/p/talks-and-workshops
+  notes: "[R] 'starts at'; 15-min TED-style or 30-min keynote; travel extra"
+- id: r-ailivelab-lunch-learn
+  specialty: training
+  offering: talk
+  provider: AI Live Learning Lab (lunch and learn)
+  region: NZ
+  price: 869
+  currency: NZD
+  unit: per_event
+  contact_hours: 1
+  delivery: either
+  provider_tier: new
+  evidence: fetched
+  date: 2026-10
+  url: https://www.ailivelearninglab.com/lunch-and-learn
+  notes: "[R] 'from', + GST; currency not named on page (NZD assumed by [R]); unlimited attendees, recording included"
+
+# ---------- Private (intra) days ----------
+- id: r-bcm-private-day
+  specialty: training
+  offering: private_day
+  provider: Building Creative Machines
+  region: EU
+  price: 10000
+  currency: EUR
+  unit: per_group
+  contact_hours: 8
+  group_size: 20
+  delivery: onsite
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://www.buildingcreativemachines.com/p/talks-and-workshops
+  notes: "[R] tailored; travel and VAT extra; 3 days 15000"
+- id: r-bcm-half-day
+  specialty: training
+  offering: half_day
+  provider: Building Creative Machines
+  region: EU
+  price: 6000
+  currency: EUR
+  unit: per_group
+  contact_hours: 4
+  group_size: 20
+  delivery: onsite
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://www.buildingcreativemachines.com/p/talks-and-workshops
+  notes: "[R] 0.60 of full day"
+- id: r-crisp-private-day
+  specialty: training
+  offering: private_day
+  provider: Crisp (Swedish consultancy)
+  region: SE
+  price: 8000
+  currency: EUR
+  unit: per_group
+  delivery: onsite
+  provider_tier: established
+  evidence: snippet
+  date: 2026-10
+  url: https://www.crisp.se/?p=14552
+  notes: "[R] page 404; remote 6000 (-25%); half day 4000 onsite, 3000 remote; unverified"
+- id: francefg-intra-day
+  specialty: training
+  offering: private_day
+  provider: FranceFG (AI training)
+  region: FR
+  price: 1990
+  currency: EUR
+  unit: per_group
+  contact_hours: 7
+  group_size: 10
+  delivery: onsite
+  provider_tier: established
+  evidence: fetched
+  date: 2026-09
+  url: https://francefg.fr/former-salaries-ia/
+  notes: HT, before OPCO; classe virtuelle 1790 (-10%); 2 days 3900; inter 590 per person -> break-even 3.4
+- id: francefg-intra-day-online
+  specialty: training
+  offering: private_day
+  provider: FranceFG (AI training, classe virtuelle)
+  region: FR
+  price: 1790
+  currency: EUR
+  unit: per_group
+  contact_hours: 7
+  group_size: 10
+  delivery: online
+  provider_tier: established
+  evidence: fetched
+  date: 2026-09
+  url: https://francefg.fr/former-salaries-ia/
+  notes: HT
+- id: tensoria-intra-market
+  specialty: training
+  offering: private_day
+  provider: French AI-training market (Tensoria summary; Flowt from 1500)
+  region: FR
+  price_low: 1500
+  price_high: 2000
+  currency: EUR
+  unit: per_group
+  contact_hours: 7
+  delivery: onsite
+  provider_tier: established
+  evidence: fetched
+  date: 2026-08
+  url: https://tensoria.fr/blog/prix-formation-ia-entreprise
+  notes: excl. travel, materials, room; groups typically 4-12; article says intra wins from about 5 participants
+- id: comparateur-intra
+  specialty: training
+  offering: private_day
+  provider: Comparateur-ia.com (observed 2026 rates)
+  region: FR
+  price: 2500
+  currency: EUR
+  unit: per_group
+  delivery: onsite
+  provider_tier: established
+  evidence: fetched
+  date: 2026-06
+  url: https://comparateur-ia.com/ai-training/
+  notes: approx; 6-15 people, 2-5 day sessions; economical from 6-8 participants
+- id: hubertine-intra-day
+  specialty: training
+  offering: private_day
+  provider: Centre Hubertine Auclert
+  region: FR
+  price: 2000
+  currency: EUR
+  unit: per_group
+  group_size: 15
+  delivery: onsite
+  provider_tier: institution
+  evidence: fetched
+  date: 2026-01
+  url: https://www.centre-hubertine-auclert.fr/sites/default/files/medias/Grille%20tarifs%20formation%202026.pdf
+  notes: non-member; member 1500; partner 500; non-profit grid
+- id: toulouse-mediadoc-intra
+  specialty: training
+  offering: private_day
+  provider: Comue de Toulouse, Mediad'Oc (intra for libraries)
+  region: FR
+  price_low: 900
+  price_high: 1620
+  currency: EUR
+  unit: per_group
+  contact_hours: 6
+  delivery: onsite
+  provider_tier: institution
+  evidence: fetched
+  date: 2025-03
+  url: https://www.univ-toulouse.fr/sites/default/files/INSTANCES/2025-010_CA_ComueTlse_14.03.2025_note_Modif_tarifs%20MediadOc.pdf
+  notes: 150-270 EUR/h; raised 25% from 720-1320 because independent trainers' rates rose; includes the institution's own design and organisation overhead
+- id: tutorials-uk-inhouse-day
+  specialty: training
+  offering: private_day
+  provider: Tutorials.co.uk (AI day on site)
+  region: UK
+  price: 1049
+  currency: GBP
+  unit: per_group
+  delivery: onsite
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://www.tutorials.co.uk/train-your-team
+  notes: + VAT; travel included; minimum 8 attendees; not per head; mentoring 75 GBP/h
+- id: wecallshotgun-exec-briefing
+  specialty: training
+  offering: half_day
+  provider: We Call Shotgun (formerly Spicy Advisory)
+  region: UK
+  price: 3500
+  currency: GBP
+  unit: per_group
+  group_size: 15
+  delivery: onsite
+  provider_tier: established
+  evidence: fetched
+  date: 2026-07
+  url: https://wecallshotgun.com/blog/ai-training-cost-uk-2026
+  notes: "'from', net of VAT; [R] had this as snippet, now fetched"
+- id: wecallshotgun-2day-intensive
+  specialty: training
+  offering: private_day
+  provider: We Call Shotgun (two-day department intensive)
+  region: UK
+  price: 12000
+  currency: GBP
+  unit: per_group
+  group_size: 20
+  delivery: onsite
+  provider_tier: established
+  evidence: fetched
+  date: 2026-07
+  url: https://wecallshotgun.com/blog/ai-training-cost-uk-2026
+  notes: from; 2 days; about 600 GBP per person
+- id: r-teamland-session
+  specialty: training
+  offering: private_day
+  provider: Teamland
+  region: US
+  price_low: 5000
+  price_high: 50000
+  currency: USD
+  unit: per_group
+  delivery: either
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://www.teamland.com/post/ai-training-cost
+  notes: "[R] per team session, 15-30 participants; enterprise-skewed"
+
+# ---------- Open (inter) per-person days ----------
+- id: francefg-inter
+  specialty: training
+  offering: open_workshop_day
+  provider: FranceFG
+  region: FR
+  price: 590
+  currency: EUR
+  unit: per_person
+  contact_hours: 7
+  delivery: either
+  provider_tier: established
+  evidence: fetched
+  date: 2026-09
+  url: https://francefg.fr/former-salaries-ia/
+  notes: HT; offered for 1-3 employees
+- id: orsys-ai-inter
+  specialty: training
+  offering: open_workshop_day
+  provider: ORSYS, Intelligence artificielle enjeux et outils (via Tensoria)
+  region: FR
+  price: 1010
+  currency: EUR
+  unit: per_person
+  contact_hours: 7
+  delivery: onsite
+  provider_tier: institution
+  evidence: secondary
+  date: 2026-08
+  url: https://tensoria.fr/blog/prix-formation-ia-entreprise
+  notes: 2020 EUR HT for 2 days
+- id: cegos-ai-manager-inter
+  specialty: training
+  offering: open_workshop_day
+  provider: Cegos, Manager plus efficacement avec l'IA (via Tensoria)
+  region: FR
+  price: 825
+  currency: EUR
+  unit: per_person
+  contact_hours: 7
+  delivery: onsite
+  provider_tier: institution
+  evidence: secondary
+  date: 2026-08
+  url: https://tensoria.fr/blog/prix-formation-ia-entreprise
+  notes: 1650 EUR HT for 2 days; article FAQ gives 1590-1650, inconsistent
+- id: dawan-ai-managers-inter
+  specialty: training
+  offering: open_workshop_day
+  provider: Dawan, IA pour les managers initiation
+  region: FR
+  price: 875
+  currency: EUR
+  unit: per_person
+  contact_hours: 7
+  delivery: onsite
+  provider_tier: established
+  evidence: fetched
+  date: 2026
+  url: https://www.dawan.fr/formations/intelligence-artificielle/ia-et-management/ia-pour-les-managers-initiation.pdf
+  notes: HT; distanciel 700 (-20%)
+- id: dawan-ai-managers-inter-online
+  specialty: training
+  offering: open_workshop_day
+  provider: Dawan, IA pour les managers initiation (distanciel)
+  region: FR
+  price: 700
+  currency: EUR
+  unit: per_person
+  contact_hours: 7
+  delivery: online
+  provider_tier: established
+  evidence: fetched
+  date: 2026
+  url: https://www.dawan.fr/formations/intelligence-artificielle/ia-et-management/ia-pour-les-managers-initiation.pdf
+  notes: HT
+- id: comparateur-inter
+  specialty: training
+  offering: open_workshop_day
+  provider: Comparateur-ia.com (observed 2026 rates)
+  region: FR
+  price_low: 600
+  price_high: 1200
+  currency: EUR
+  unit: per_person
+  delivery: onsite
+  provider_tier: established
+  evidence: fetched
+  date: 2026-06
+  url: https://comparateur-ia.com/ai-training/
+  notes: per person for a 1-3 day inter course (not per day)
+- id: hubertine-inter
+  specialty: training
+  offering: open_workshop_day
+  provider: Centre Hubertine Auclert
+  region: FR
+  price: 350
+  currency: EUR
+  unit: per_person
+  delivery: onsite
+  provider_tier: institution
+  evidence: fetched
+  date: 2026-01
+  url: https://www.centre-hubertine-auclert.fr/sites/default/files/medias/Grille%20tarifs%20formation%202026.pdf
+  notes: per day, non-member; member 150; partner 50; non-member associations 200
+- id: haufe-ai-trainings-online
+  specialty: training
+  offering: open_workshop_day
+  provider: Haufe Akademie, Mit KI Schulungen vorbereiten und gestalten
+  region: DE
+  price: 790
+  currency: EUR
+  unit: per_person
+  contact_hours: 8
+  group_size: 11
+  delivery: online
+  provider_tier: institution
+  evidence: fetched
+  date: 2026-10
+  url: https://www.haufe-akademie.de/42131
+  notes: plus VAT; 09:00-17:00 live online via Zoom; contact hours include breaks
+- id: haufe-chatgpt-advanced-online
+  specialty: training
+  offering: open_workshop_day
+  provider: Haufe Akademie, ChatGPT Advanced im Steuer- und Rechnungswesen
+  region: DE
+  price: 890
+  currency: EUR
+  unit: per_person
+  contact_hours: 8
+  delivery: online
+  provider_tier: institution
+  evidence: snippet
+  date: 2026
+  url: https://www.haufe-akademie.de/41310
+  notes: plus VAT; 09:00-17:00 live online
+- id: globalknowledge-uk-genai-award
+  specialty: training
+  offering: open_workshop_day
+  provider: Global Knowledge UK, Generative AI Award
+  region: UK
+  price: 795
+  currency: GBP
+  unit: per_person
+  delivery: online
+  provider_tier: institution
+  evidence: fetched
+  date: 2026-10
+  url: https://www.globalknowledge.com/en-gb/courses/data_and_ai/artificial_intelligence/genai-award/v/langen
+  notes: ex VAT; 1 day; includes exam; also public classroom and company event
+- id: bilginc-uk-genai-business
+  specialty: training
+  offering: open_workshop_day
+  provider: Bilginc UK, GENAIBIZ
+  region: UK
+  price: 764
+  currency: GBP
+  unit: per_person
+  delivery: either
+  provider_tier: established
+  evidence: snippet
+  date: 2026
+  url: https://bilginc.com/gb/training/genaibiz-making-chatgpt-and-generative-ai-work-for-you-10286-training/
+  notes: from, + VAT; 1 day
+- id: r-jellyfish-uk-ai-day
+  specialty: training
+  offering: open_workshop_day
+  provider: Jellyfish Training (UK)
+  region: UK
+  price: 499
+  currency: GBP
+  unit: per_person
+  delivery: either
+  provider_tier: established
+  evidence: snippet
+  date: 2026-10
+  url: https://prod-training.jellyfish.com/en-gb/training/gen-ai-courses
+  notes: "[R] ex VAT; general ChatGPT-type course"
+- id: r-georgia-storylab-day
+  specialty: training
+  offering: open_workshop_day
+  provider: Georgia StoryLab, Make a Short in One Day
+  region: US
+  price: 250
+  currency: USD
+  unit: per_person
+  contact_hours: 9
+  delivery: onsite
+  provider_tier: new
+  evidence: fetched
+  date: 2025-11
+  url: https://www.georgiaentertainment.com/?p=26872
+  notes: "[R] early bird 199; promises exportable short; pre-work packet; listing expired"
+- id: r-fmc-ai-video-creators
+  specialty: training
+  offering: open_workshop_day
+  provider: FMC Training, AI for Video Creators
+  region: US
+  price: 495
+  currency: USD
+  unit: per_person
+  contact_hours: 7.5
+  delivery: either
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://www.fmctraining.com/ai/adobe-ai/ai-for-video-creators-workshop
+  notes: "[R] 10:00-17:30; Adobe Firefly focus"
+- id: ntu-uk-ai-copywriting
+  specialty: training
+  offering: open_workshop_day
+  provider: Nottingham Trent University, AI for Copywriting
+  region: UK
+  price: 225
+  currency: GBP
+  unit: per_person
+  contact_hours: 6
+  delivery: onsite
+  provider_tier: institution
+  evidence: snippet
+  date: 2026-11
+  url: https://onlinestore.ntu.ac.uk/short-courses/business-management-and-marketing/presentation-and-writing-skills/ai-for-copywriting
+  notes: 10:00-16:00; format not confirmed
+- id: mannheim-music-ai
+  specialty: training
+  offering: open_workshop_day
+  provider: Abendakademie Mannheim, Music Production with AI
+  region: DE
+  price: 59
+  currency: EUR
+  unit: per_person
+  contact_hours: 4
+  delivery: onsite
+  provider_tier: institution
+  evidence: snippet
+  date: 2026-06
+  url: https://www.abendakademie-mannheim.de/programm/kurs/Music-Production-with-AI/J473020
+  notes: adult-education subsidised pricing; not comparable to professional training
+
+# ---------- Live cohorts and series ----------
+- id: lfw-ai-filmmaking
+  specialty: training
+  offering: online_cohort
+  provider: London Film Workshops, AI Fundamentals for Filmmaking
+  region: UK
+  price: 475
+  currency: GBP
+  unit: per_person
+  contact_hours: 14
+  group_size: 25
+  delivery: either
+  provider_tier: established
+  evidence: fetched
+  date: 2026-06
+  url: https://lfw.org.uk/course/introduction-to-ai/
+  notes: 1 in-person day 6.5h + 5 online sessions of 1.5h; 10-25 participants; 90 GBP per individual online session; about 34 GBP per contact hour
+- id: filmskolen-mastering-ai
+  specialty: training
+  offering: online_cohort
+  provider: National Film School of Denmark, Mastering AI for European Film Professionals
+  region: EU
+  price: 2500
+  currency: EUR
+  unit: per_person
+  group_size: 24
+  delivery: either
+  provider_tier: institution
+  evidence: fetched
+  date: 2026
+  url: https://www.filmskolen.dk/en/courses/mastering-ai-for-european-film-professionals-1
+  notes: 9 months, 5 modules (3 onsite Copenhagen/Utrecht/Tallinn, 2 online), about 16 programme days; contact hours not stated; likely subsidised; travel extra
+- id: ntu-sg-suno-music
+  specialty: training
+  offering: series
+  provider: NTU/NIE Singapore, Suno AI Music for Content Creators
+  region: SG
+  price: 960
+  currency: SGD
+  unit: per_person
+  delivery: online
+  provider_tier: institution
+  evidence: fetched
+  date: 2026
+  url: https://www.ntu.edu.sg/nie/admissions/continuing-education-training/cvp0001
+  notes: before GST; sessions and hours not stated on page (3 sessions per a search snippet)
+- id: emphasis-ai-writing
+  specialty: training
+  offering: series
+  provider: Emphasis (writing-skills.com), Superhuman writing with AI
+  region: UK
+  price: 300
+  currency: GBP
+  unit: per_person
+  contact_hours: 2
+  group_size: 12
+  delivery: online
+  provider_tier: established
+  evidence: snippet
+  date: 2025-03
+  url: https://www.writing-skills.com/wp-content/uploads/2025/03/Superhuman_writing_AI_Individual–Online-2025-02.pdf
+  notes: + VAT; business writing; 150 GBP per contact hour
+- id: r-cgpro-ai-filmmakers
+  specialty: training
+  offering: online_cohort
+  provider: CG Pro, AI for Filmmakers Live
+  region: US
+  price: 848
+  currency: USD
+  unit: per_person
+  contact_hours: 40
+  delivery: online
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://pages.becomecgpro.com/ai-for-filmmakers-course-live
+  notes: "[R] from; 6 weeks; about 21 USD per live hour; page has a date inconsistency"
+- id: r-ainvfx-bootcamp
+  specialty: training
+  offering: online_cohort
+  provider: ainvfx, Generative AI Bootcamp for Film and TV
+  region: US
+  price: 2995
+  currency: USD
+  unit: per_person
+  contact_hours: 60
+  group_size: 12
+  delivery: online
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://www.ainvfx.com/bootcamp/
+  notes: "[R] 10 weeks, two 3h sessions weekly, two instructors; 50 USD per live hour"
+- id: r-ucla-ai-toolsets
+  specialty: training
+  offering: online_cohort
+  provider: UCLA Extension, AI Toolsets and Workflows for Creative Production
+  region: US
+  price: 835
+  currency: USD
+  unit: per_person
+  contact_hours: 33
+  delivery: onsite
+  provider_tier: institution
+  evidence: fetched
+  date: 2026-10
+  url: https://www.uclaextension.edu/entertainment/film-tv/course/ai-toolsets-and-workflows-creative-production-film-tv-x-4786
+  notes: "[R] Fall 2026; Winter 2027 960; 11 weeks; contact hours inferred 11x3h; software about 163 USD/month extra"
+- id: r-curious-refuge
+  specialty: training
+  offering: online_cohort
+  provider: Curious Refuge, AI Filmmaking
+  region: US
+  price: 749
+  currency: USD
+  unit: per_person
+  contact_hours: 0
+  delivery: recorded
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://curiousrefuge.com/ai-filmmaking
+  notes: "[R] 4 weeks; not live"
+- id: r-maine-media-2day
+  specialty: training
+  offering: online_cohort
+  provider: Maine Media Workshops, 2-Day Intro to AI for Filmmakers (online)
+  region: US
+  price: 295
+  currency: USD
+  unit: per_person
+  contact_hours: 6
+  group_size: 12
+  delivery: online
+  provider_tier: institution
+  evidence: fetched
+  date: 2026-10
+  url: https://www.mainemedia.edu/workshops/item/2-day-intro-to-ai-for-filmmakers-and-content-creators-online/
+  notes: "[R] 49 USD per live hour"
+- id: r-sundance-navigating-ai
+  specialty: training
+  offering: online_cohort
+  provider: Sundance Collab, Navigating AI in Filmmaking
+  region: US
+  price: 395
+  currency: USD
+  unit: per_person
+  contact_hours: 14.5
+  delivery: online
+  provider_tier: institution
+  evidence: fetched
+  date: 2026-10
+  url: https://collab.sundance.org/catalog/Navigating-AI-in-Filmmaking
+  notes: "[R] 3-day weekend; contact hours approx; recordings posted"
+- id: r-section-ai-writing
+  specialty: training
+  offering: series
+  provider: Section, AI for Writing
+  region: US
+  price: 195
+  currency: USD
+  unit: per_person
+  contact_hours: 2
+  delivery: online
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://www.sectionai.com/courses/ai-for-writing
+  notes: "[R] list price; promo 100"
+- id: r-berklee-ai-songwriters
+  specialty: training
+  offering: online_cohort
+  provider: Berklee Online, AI for Songwriters
+  region: US
+  price: 525
+  currency: USD
+  unit: per_person
+  delivery: online
+  provider_tier: institution
+  evidence: fetched
+  date: 2026-10
+  url: https://online.berklee.edu/courses/ai-for-songwriters
+  notes: "[R] 4 weeks, 5-10 h/week of work; live hours not stated"
+- id: r-beginners-in-ai
+  specialty: training
+  offering: series
+  provider: Beginners in AI
+  region: US
+  price: 75
+  currency: USD
+  unit: per_hour
+  delivery: online
+  provider_tier: new
+  evidence: snippet
+  date: 2026-10
+  url: https://beginnersinai.beehiiv.com/workshops
+  notes: "[R] per person per hour, minimum 5"
+- id: r-edadvance-songwriting
+  specialty: training
+  offering: series
+  provider: EdAdvance, Creative Songwriting Using AI
+  region: US
+  price: 105
+  currency: USD
+  unit: per_person
+  contact_hours: 10
+  delivery: online
+  provider_tier: institution
+  evidence: snippet
+  date: 2026-02
+  url: https://edadvance-adult-continuing-education.coursestorm.com/course/creative-songwriting-using-ai-online1?page=5
+  notes: "[R] 5 x 2h; community education, not comparable"
+
+# ---------- Coaching ----------
+- id: icf-2023-western-europe
+  specialty: training
+  offering: coaching
+  provider: ICF Global Coaching Study 2023 (Western Europe average)
+  region: EU
+  price: 277
+  currency: USD
+  unit: per_hour
+  contact_hours: 1
+  delivery: either
+  provider_tier: established
+  evidence: fetched
+  date: 2022-12
+  url: https://coachingfederation.org/app/uploads/2023/04/2023ICFGlobalCoachingStudy_ExecutiveSummary.pdf
+  notes: average fee per one-hour session; global 244, North America 272, Eastern Europe 138; 14591 responses
+- id: bdvt-2020-coaching
+  specialty: training
+  offering: coaching
+  provider: BDVT Honorarempfehlung 2020 (starter / professional / senior)
+  region: DE
+  price_low: 200
+  price_high: 440
+  currency: EUR
+  unit: per_hour
+  delivery: either
+  provider_tier: established
+  evidence: fetched
+  date: 2020
+  url: https://www.berlin.de/sen/europa/_assets/srvice/projektfoerderung/honorarempfehlung-training-coaching_2020.pdf
+  notes: "'ab' (from) 200 starter, 275 professional, 440 senior; recommendation, not survey"
+- id: misteria-exec-ai-coaching
+  specialty: training
+  offering: coaching
+  provider: Mister IA (via Tensoria)
+  region: FR
+  price: 5000
+  currency: EUR
+  unit: per_project
+  contact_hours: 7.5
+  delivery: either
+  provider_tier: established
+  evidence: secondary
+  date: 2026-08
+  url: https://tensoria.fr/blog/prix-formation-ia-entreprise
+  notes: from, HT; 5 sessions x 1.5h over 5 months; about 665 EUR/h
+- id: r-gabemichael-coaching
+  specialty: training
+  offering: coaching
+  provider: Gabe Michael, filmmaker-coach
+  region: US
+  price: 199
+  currency: USD
+  unit: per_hour
+  contact_hours: 0.83
+  delivery: online
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://gabemichael.ai/?p=3647
+  notes: "[R] per 50 min; 150 in a 3-pack; 125 in a 12-pack; 500/h on Maven (snippet)"
+- id: r-doaw-coaching
+  specialty: training
+  offering: coaching
+  provider: DOAW.AI, AI video 1:1
+  region: global
+  price: 111
+  currency: USD
+  unit: per_hour
+  contact_hours: 0.5
+  delivery: online
+  provider_tier: new
+  evidence: snippet
+  date: 2026-10
+  url: https://selar.com/1x1q81o419
+  notes: "[R] about 111 USD per 30 min"
+- id: r-sundance-1to1
+  specialty: training
+  offering: coaching
+  provider: Sundance Collab 1:1 add-on
+  region: US
+  price: 150
+  currency: USD
+  unit: per_hour
+  contact_hours: 0.75
+  delivery: online
+  provider_tier: institution
+  evidence: snippet
+  date: 2026-10
+  url: https://collab.sundance.org/catalog/Previsualization-with-AI-Tools-for-Filmmakers
+  notes: "[R] 150 USD per 45 min"
+
+# ---------- Day rates ----------
+- id: itjobswatch-uk-trainer
+  specialty: training
+  offering: trainer_day_rate
+  provider: ITJobsWatch, UK contract Trainer jobs (median)
+  region: UK
+  price: 413
+  currency: GBP
+  unit: per_day
+  delivery: n/a
+  provider_tier: freelancer
+  evidence: fetched
+  date: 2026-10
+  url: https://www.itjobswatch.co.uk/contracts/uk/trainer.do
+  notes: P10 208, P90 625; 108 quoted rates, 6 months to 17 Oct 2026; advertised contract jobs, not senior specialist fees
+- id: uk-ai-consultant-independent
+  specialty: training
+  offering: consultant_day_rate
+  provider: We Call Shotgun, UK AI consulting bands (independent)
+  region: UK
+  price_low: 500
+  price_high: 2000
+  currency: GBP
+  unit: per_day
+  delivery: n/a
+  provider_tier: freelancer
+  evidence: fetched
+  date: 2026-08
+  url: https://wecallshotgun.com/blog/ai-consulting-costs-uk-2026
+  notes: boutique 900-1600; Big 4 2000-5000; vendor page
+- id: uk-ai-trainer-freelance
+  specialty: training
+  offering: trainer_day_rate
+  provider: SoftBlues via We Call Shotgun (freelance AI trainers)
+  region: UK
+  price_low: 500
+  price_high: 750
+  currency: GBP
+  unit: per_day
+  delivery: n/a
+  provider_tier: freelancer
+  evidence: secondary
+  date: 2026-07
+  url: https://wecallshotgun.com/blog/ai-training-cost-uk-2026
+  notes: boutique 600-900; major consultancies 1000-1500+; London 20-40% premium
+- id: tjmetre-formation-coaching
+  specialty: training
+  offering: trainer_day_rate
+  provider: TJMetre barometer, Formation / Coaching category median
+  region: FR
+  price: 795
+  currency: EUR
+  unit: per_day
+  delivery: n/a
+  provider_tier: freelancer
+  evidence: fetched
+  date: 2026-10
+  url: https://tjmetre.fr/barometre
+  notes: about 1% of observations; formateur IT median 600 (P25 500, P75 840, n=10); management 780 (n=13); data 810 (n=4); another page of the site says 810-825
+- id: tjmetre-consultant-ia
+  specialty: training
+  offering: consultant_day_rate
+  provider: TJMetre barometer, consultant IA
+  region: FR
+  price: 700
+  currency: EUR
+  unit: per_day
+  delivery: n/a
+  provider_tier: freelancer
+  evidence: fetched
+  date: 2026-10
+  url: https://tjmetre.fr/barometre
+  notes: P25 580, P75 1000, n=19; IA/LLM specialty median 810 (n=43)
+- id: 2iportage-formateur
+  specialty: training
+  offering: trainer_day_rate
+  provider: 2iPortage barometer (formateur, management)
+  region: FR
+  price_low: 400
+  price_high: 600
+  currency: EUR
+  unit: per_day
+  delivery: n/a
+  provider_tier: freelancer
+  evidence: fetched
+  date: 2025-12
+  url: https://www.2iportage.com/barometre-des-tarifs-freelances-et-consultants/
+  notes: HT; coach 500-600
+- id: malt-guide-formateur-senior
+  specialty: training
+  offering: trainer_day_rate
+  provider: profil-score.com compiled Malt grid (formateur / ingenieur pedagogique, senior)
+  region: FR
+  price_low: 750
+  price_high: 1200
+  currency: EUR
+  unit: per_day
+  delivery: n/a
+  provider_tier: freelancer
+  evidence: fetched
+  date: 2026-01
+  url: https://profil-score.com/guides/tjm-moyen-par-metier-malt
+  notes: confirmé 500-750; displayed Malt TJM incl. 8-10% commission; Paris; author's compiled estimate, not official Malt
+- id: kaliio-ai-expert-trainer
+  specialty: training
+  offering: trainer_day_rate
+  provider: Kaliio 2026 via Tensoria (independent AI / data-science expert trainer)
+  region: FR
+  price_low: 1100
+  price_high: 1800
+  currency: EUR
+  unit: per_day
+  delivery: n/a
+  provider_tier: freelancer
+  evidence: secondary
+  date: 2026
+  url: https://tensoria.fr/blog/prix-formation-ia-entreprise
+  notes: junior generalist trainer 400-700
+- id: bdvt-2020-training-professional
+  specialty: training
+  offering: trainer_day_rate
+  provider: BDVT Honorarempfehlung 2020 (professional, own-designed content)
+  region: DE
+  price: 2000
+  currency: EUR
+  unit: per_day
+  delivery: either
+  provider_tier: established
+  evidence: fetched
+  date: 2020
+  url: https://www.berlin.de/sen/europa/_assets/srvice/projektfoerderung/honorarempfehlung-training-coaching_2020.pdf
+  notes: "'ab'; starter 1500, senior 3300; standard content 1200/1400/2600; delivery-only 950/1200; design and prep billed at same day rate as own-content training; no online/offline difference; VAT, travel, prior-day arrival extra"
+- id: knab-nl-trainer
+  specialty: training
+  offering: trainer_day_rate
+  provider: Knab zzp Uurtarievenboekje 2026 (coach/trainer average)
+  region: NL
+  price: 95
+  currency: EUR
+  unit: per_hour
+  delivery: n/a
+  provider_tier: freelancer
+  evidence: fetched
+  date: 2026
+  url: https://bieb.knab.nl/ondernemen/wat-verdient-een-coach-trainer-zzp-bekijk-het-uurtarief-en-de-winst
+  notes: excl. BTW; starter 82, experienced 101; 19 billable h/week; survey of 20000+ zzp
+
+# ---------- Platform, payment and venue fees ----------
+- id: stripe-fr-eea-card
+  specialty: training
+  offering: payment_fee
+  provider: Stripe (France account, standard EEA cards)
+  region: FR
+  price: 1.5
+  currency: EUR
+  unit: percent
+  delivery: n/a
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://stripe.com/fr/pricing
+  notes: plus 0.25 EUR per transaction; premium EEA 2.8%; UK cards 2.5%; international 3.15%; +2% currency conversion
+- id: stripe-uk-uk-card
+  specialty: training
+  offering: payment_fee
+  provider: Stripe (UK account, standard UK cards)
+  region: UK
+  price: 1.5
+  currency: GBP
+  unit: percent
+  delivery: n/a
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://stripe.com/gb/pricing
+  notes: plus 20p; premium UK 2.8%; EEA 2.5%; international 3.15%; +2% FX
+- id: maven-platform-fee
+  specialty: training
+  offering: platform_fee
+  provider: Maven
+  region: global
+  price: 10
+  currency: USD
+  unit: percent
+  delivery: online
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://help.maven.com/en/articles/12240853-maven-instructor-policy-guidebook
+  notes: of gross; Stripe fees deducted first; affiliate programme up to 30% combined discount+commission for products over 250 USD
+- id: teachable-starter-fee
+  specialty: training
+  offering: platform_fee
+  provider: Teachable Starter
+  region: global
+  price: 7.5
+  currency: USD
+  unit: percent
+  delivery: online
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://teachable.com/pricing
+  notes: plan 39 USD/mo (29 annual); Builder 89 (69) and above 0%; card processing extra (2.9% + 30c US)
+- id: thinkific-payments
+  specialty: training
+  offering: platform_fee
+  provider: Thinkific Payments
+  region: global
+  price: 2.9
+  currency: EUR
+  unit: percent
+  delivery: online
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://www.thinkific.com/pricing/
+  notes: processing fee; plans Basic 53 EUR/mo (39 annual), Start 107 (79), Grow 213 (159); extra gateway fee with own Stripe/PayPal (amount not on page)
+- id: podia-mover-fee
+  specialty: training
+  offering: platform_fee
+  provider: Podia Mover
+  region: global
+  price: 5
+  currency: USD
+  unit: percent
+  delivery: online
+  provider_tier: established
+  evidence: snippet
+  date: 2026
+  url: https://schoolmaker.com/blog/podia-pricing
+  notes: third-party; Shaker and above 0%; prices changed June 2026
+- id: eventbrite-uk-service-fee
+  specialty: training
+  offering: ticketing_fee
+  provider: Eventbrite UK
+  region: UK
+  price: 6.95
+  currency: GBP
+  unit: percent
+  delivery: n/a
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://www.eventbrite.co.uk/help/en-gb/articles/755615/[slug]/
+  notes: plus 0.59 GBP per paid ticket; buyer pays by default; free events free
+- id: eventbrite-fr-legacy
+  specialty: training
+  offering: ticketing_fee
+  provider: Eventbrite France (legacy Essentials)
+  region: FR
+  price: 3.5
+  currency: EUR
+  unit: percent
+  delivery: n/a
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://www.eventbrite.co.uk/help/en-gb/articles/755615/[slug]/
+  notes: plus 0.49 EUR per ticket; Professional 5.5% + 0.99; only legacy packages listed for France
+- id: venue-paris-15e
+  specialty: training
+  offering: venue_day
+  provider: Zipcube listing, salle de reunion Paris 15e
+  region: FR
+  price: 605
+  currency: EUR
+  unit: per_day
+  group_size: 15
+  delivery: onsite
+  provider_tier: established
+  evidence: fetched
+  date: 2026-10
+  url: https://www.zipcube.com/fr/ap/meeting/mg1ye432pfeo
+  notes: 121 EUR/h; 10 boardroom / 15 classroom / 20 theatre; VAT not stated
+- id: venue-paris-montaigne
+  specialty: training
+  offering: venue_day
+  provider: Zipcube listing, salle Montaigne (Franklin D. Roosevelt)
+  region: FR
+  price: 1441
+  currency: EUR
+  unit: per_day
+  group_size: 16
+  delivery: onsite
+  provider_tier: established
+  evidence: snippet
+  date: 2026
+  url: https://www.zipcube.com/fr/salle-de-r%C3%A9union/paris
+  notes: 180 EUR/h; premium location
+- id: venue-paris-maison-suger
+  specialty: training
+  offering: venue_day
+  provider: FMSH Maison Suger, grande salle
+  region: FR
+  price: 600
+  currency: EUR
+  unit: per_day
+  group_size: 25
+  delivery: onsite
+  provider_tier: institution
+  evidence: snippet
+  date: 2025
+  url: https://www.fmsh.fr/sites/default/files/media/files/Tarifs%202025%20Maison%20Suger%20-%20salles%20de%20r%C3%A9union.pdf
+  notes: half day 350; 20-25 people; PDF layout unclear, confirm
+- id: venue-london-cally-yard
+  specialty: training
+  offering: venue_day
+  provider: Terrence Higgins Trust, Cally Yard boardroom (N7)
+  region: UK
+  price: 450
+  currency: GBP
+  unit: per_day
+  group_size: 16
+  delivery: onsite
+  provider_tier: institution
+  evidence: fetched
+  date: 2026-10
+  url: https://www.tht.org.uk/get-help/head-office/cally-yard-meeting-room-hire
+  notes: ex VAT; half day 270; 68/h; Wi-Fi, video conferencing, tea/coffee included; 9:30-17:30 weekdays
+- id: venue-london-speakup
+  specialty: training
+  offering: venue_day
+  provider: Speak Up London training rooms (Zipcube)
+  region: UK
+  price: 450
+  currency: GBP
+  unit: per_day
+  group_size: 16
+  delivery: onsite
+  provider_tier: established
+  evidence: snippet
+  date: 2026
+  url: https://zipcube.com/uk/venues/speak-up-london/4615
+  notes: 9-16 people; 56 GBP/h; 6h minimum for day rate
+- id: venue-london-cpag
+  specialty: training
+  offering: venue_day
+  provider: CPAG room hire (N1)
+  region: UK
+  price_low: 300
+  price_high: 350
+  currency: GBP
+  unit: per_day
+  group_size: 20
+  delivery: onsite
+  provider_tier: institution
+  evidence: snippet
+  date: 2026
+  url: https://cpag.org.uk/training-and-events/room-hire
+  notes: + VAT; 300 voluntary orgs, 350 statutory orgs; commercial rate not seen
