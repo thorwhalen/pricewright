@@ -2,18 +2,18 @@
 
 # About this build
 
-This documentation was built on **2026-10-17 07:10 UTC** from commit <a href="https://github.com/thorwhalen/pricewright/commit/ffd5c6a07fb374bd3da329986b29c8d4ce812d4e"><code>ffd5c6a</code></a> on branch <code>main</code>, for **pricewright 0.0.1** (from <code>pyproject.toml</code>).
+This documentation was built on **2026-11-23 21:51 UTC** from commit <a href="https://github.com/thorwhalen/pricewright/commit/e2c52791a32af1db738bcdcde014016263a196b4"><code>e2c5279</code></a> on branch <code>main</code>, for **pricewright 0.0.2** (from <code>pyproject.toml</code>).
 
 #### WARNING
 The documentation and the package may be misaligned:
 
-- The documented version (0.0.1) is behind the latest release on PyPI (0.0.2): `pip install pricewright` gives newer code than these docs describe.
+- The documented version (0.0.2) is behind the latest release on PyPI (0.0.3): `pip install pricewright` gives newer code than these docs describe.
 
 ## Source
 
 |                     |                                                                                                                                                               |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Commit              | <a href="https://github.com/thorwhalen/pricewright/commit/ffd5c6a07fb374bd3da329986b29c8d4ce812d4e"><code>ffd5c6a07fb374bd3da329986b29c8d4ce812d4e</code></a> |
+| Commit              | <a href="https://github.com/thorwhalen/pricewright/commit/e2c52791a32af1db738bcdcde014016263a196b4"><code>e2c52791a32af1db738bcdcde014016263a196b4</code></a> |
 | Branch              | <code>main</code>                                                                                                                                             |
 | Tags at this commit | none                                                                                                                                                          |
 | Working tree        | clean                                                                                                                                                         |
@@ -24,18 +24,18 @@ The documentation and the package may be misaligned:
 |              |                                                                                              |
 |--------------|----------------------------------------------------------------------------------------------|
 | Repository   | <code>thorwhalen/pricewright</code>                                                          |
-| Run          | <a href="https://github.com/thorwhalen/pricewright/actions/runs/39012553804">39012553804</a> |
+| Run          | <a href="https://github.com/thorwhalen/pricewright/actions/runs/45273697448">45273697448</a> |
 | Ref          | <code>refs/heads/main</code>                                                                 |
-| Event commit | <code>ffd5c6a07fb374bd3da329986b29c8d4ce812d4e</code> (in the history of the built commit)   |
+| Event commit | <code>e2c52791a32af1db738bcdcde014016263a196b4</code> (in the history of the built commit)   |
 
 ## Tools
 
 |          |         |
 |----------|---------|
-| epythet  | 0.2.17  |
-| Sphinx   | 9.1.0   |
+| epythet  | 0.2.25  |
+| Sphinx   | 9.1.1   |
 | docutils | 0.22.4  |
-| Python   | 3.12.15 |
+| Python   | 3.12.16 |
 
 ## Configuration as resolved
 
@@ -51,14 +51,14 @@ The documentation and the package may be misaligned:
 
 ## Package on PyPI
 
-Latest release: <a href="https://pypi.org/project/pricewright/0.0.2/">0.0.2</a>, newer than the documented version (0.0.1).
+Latest release: <a href="https://pypi.org/project/pricewright/0.0.3/">0.0.3</a>, newer than the documented version (0.0.2).
 
 ## Reproduce
 
 ```bash
 git clone https://github.com/thorwhalen/pricewright && cd pricewright
-git checkout ffd5c6a07fb374bd3da329986b29c8d4ce812d4e
-pip install "epythet==0.2.17"
+git checkout e2c52791a32af1db738bcdcde014016263a196b4
+pip install "epythet==0.2.25"
 epythet quickstart . --ignore tests/ scrap/ examples/
 ```
 

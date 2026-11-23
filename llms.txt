@@ -17,7 +17,7 @@
 - [pricewright.spec](_autosummary/pricewright.spec.html.md): A rate card as data: one YAML spec in, priced and checked card out.
 - [pricewright.travel](_autosummary/pricewright.travel.html.md): Travel as explicit variables: time away, nights, subsistence, transport.
 - [For AI agents](ai-agents.html.md): &#96;pricewright&#96; ships artifacts for coding agents alongside its code. This page lists
-- [About this build](about-this-build.html.md): This documentation was built on &#42;&#42;2026-10-17 07:10 UTC&#42;&#42; from commit &lt;a href="https://github.com/tho...
+- [About this build](about-this-build.html.md): This documentation was built on &#42;&#42;2026-11-23 21:51 UTC&#42;&#42; from commit &lt;a href="https://github.com/tho...
 
 ## Optional
 

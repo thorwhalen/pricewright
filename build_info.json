@@ -1,39 +1,39 @@
 {
   "schema_version": 1,
-  "built_at": "2026-10-17T07:10:27Z",
+  "built_at": "2026-11-23T21:51:48Z",
   "package": {
     "name": "pricewright",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "display_name": "pricewright",
     "source": "pyproject.toml"
   },
   "git": {
     "available": true,
-    "commit": "ffd5c6a07fb374bd3da329986b29c8d4ce812d4e",
-    "short_commit": "ffd5c6a",
+    "commit": "e2c52791a32af1db738bcdcde014016263a196b4",
+    "short_commit": "e2c5279",
     "branch": "main",
     "tags": [],
     "dirty": false,
     "remote_url": "https://github.com/thorwhalen/pricewright",
-    "commit_url": "https://github.com/thorwhalen/pricewright/commit/ffd5c6a07fb374bd3da329986b29c8d4ce812d4e",
+    "commit_url": "https://github.com/thorwhalen/pricewright/commit/e2c52791a32af1db738bcdcde014016263a196b4",
     "error": null
   },
   "ci": {
     "provider": "github",
     "repository": "thorwhalen/pricewright",
-    "sha": "ffd5c6a07fb374bd3da329986b29c8d4ce812d4e",
+    "sha": "e2c52791a32af1db738bcdcde014016263a196b4",
     "sha_in_history": true,
     "ref": "refs/heads/main",
     "ref_name": "main",
-    "run_id": "39012553804",
-    "run_url": "https://github.com/thorwhalen/pricewright/actions/runs/39012553804",
+    "run_id": "45273697448",
+    "run_url": "https://github.com/thorwhalen/pricewright/actions/runs/45273697448",
     "server_url": "https://github.com"
   },
   "tools": {
-    "epythet": "0.2.17",
-    "sphinx": "9.1.0",
+    "epythet": "0.2.25",
+    "sphinx": "9.1.1",
     "docutils": "0.22.4",
-    "python": "3.12.15"
+    "python": "3.12.16"
   },
   "config": {
     "theme": "auto",
@@ -60,16 +60,16 @@
   },
   "pypi": {
     "checked": true,
-    "latest": "0.0.2",
+    "latest": "0.0.3",
     "relation": "behind",
     "error": null
   },
-  "reproduce": "git clone https://github.com/thorwhalen/pricewright && cd pricewright\ngit checkout ffd5c6a07fb374bd3da329986b29c8d4ce812d4e\npip install \"epythet==0.2.17\"\nepythet quickstart . --ignore tests/ scrap/ examples/",
+  "reproduce": "git clone https://github.com/thorwhalen/pricewright && cd pricewright\ngit checkout e2c52791a32af1db738bcdcde014016263a196b4\npip install \"epythet==0.2.25\"\nepythet quickstart . --ignore tests/ scrap/ examples/",
   "warnings": [],
   "alignment": {
     "aligned": false,
     "notes": [
-      "The documented version (0.0.1) is behind the latest release on PyPI (0.0.2): `pip install pricewright` gives newer code than these docs describe."
+      "The documented version (0.0.2) is behind the latest release on PyPI (0.0.3): `pip install pricewright` gives newer code than these docs describe."
     ]
   }
 }

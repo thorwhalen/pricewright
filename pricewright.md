@@ -1,4 +1,4 @@
-> built 2026-10-17 07:10 UTC from ffd5c6a (main) · pricewright 0.0.1. Details: build_info.json
+> built 2026-11-23 21:51 UTC from e2c5279 (main) · pricewright 0.0.2. Details: build_info.json
 
 # index.html.md
 
@@ -19,9 +19,9 @@ pricewright specialties                       # templates, and the research each
 from pricewright import price, Rates
 from pricewright.specialties.training import talk, private_workshop
 
-rates = Rates({"founder": 900})                       # target day rate, 7 h a day
+rates = Rates({"founder": 900})  # target day rate, 7 h a day
 q = price(talk(delivery="online"), rates)
-q.unit_price, q.hours_total, q.effective_day           # 1700, 11.2, ~1058
+q.unit_price, q.hours_total, q.effective_day  # 1700, 11.2, ~1058
 ```
 
 ## Why
@@ -962,18 +962,18 @@ The travel line of a quote: time fee plus estimated expenses.
 
 # About this build
 
-This documentation was built on **2026-10-17 07:10 UTC** from commit <a href="https://github.com/thorwhalen/pricewright/commit/ffd5c6a07fb374bd3da329986b29c8d4ce812d4e"><code>ffd5c6a</code></a> on branch <code>main</code>, for **pricewright 0.0.1** (from <code>pyproject.toml</code>).
+This documentation was built on **2026-11-23 21:51 UTC** from commit <a href="https://github.com/thorwhalen/pricewright/commit/e2c52791a32af1db738bcdcde014016263a196b4"><code>e2c5279</code></a> on branch <code>main</code>, for **pricewright 0.0.2** (from <code>pyproject.toml</code>).
 
 #### WARNING
 The documentation and the package may be misaligned:
 
-- The documented version (0.0.1) is behind the latest release on PyPI (0.0.2): `pip install pricewright` gives newer code than these docs describe.
+- The documented version (0.0.2) is behind the latest release on PyPI (0.0.3): `pip install pricewright` gives newer code than these docs describe.
 
 ## Source
 
 |                     |                                                                                                                                                               |
 |---------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Commit              | <a href="https://github.com/thorwhalen/pricewright/commit/ffd5c6a07fb374bd3da329986b29c8d4ce812d4e"><code>ffd5c6a07fb374bd3da329986b29c8d4ce812d4e</code></a> |
+| Commit              | <a href="https://github.com/thorwhalen/pricewright/commit/e2c52791a32af1db738bcdcde014016263a196b4"><code>e2c52791a32af1db738bcdcde014016263a196b4</code></a> |
 | Branch              | <code>main</code>                                                                                                                                             |
 | Tags at this commit | none                                                                                                                                                          |
 | Working tree        | clean                                                                                                                                                         |
@@ -984,18 +984,18 @@ The documentation and the package may be misaligned:
 |              |                                                                                              |
 |--------------|----------------------------------------------------------------------------------------------|
 | Repository   | <code>thorwhalen/pricewright</code>                                                          |
-| Run          | <a href="https://github.com/thorwhalen/pricewright/actions/runs/39012553804">39012553804</a> |
+| Run          | <a href="https://github.com/thorwhalen/pricewright/actions/runs/45273697448">45273697448</a> |
 | Ref          | <code>refs/heads/main</code>                                                                 |
-| Event commit | <code>ffd5c6a07fb374bd3da329986b29c8d4ce812d4e</code> (in the history of the built commit)   |
+| Event commit | <code>e2c52791a32af1db738bcdcde014016263a196b4</code> (in the history of the built commit)   |
 
 ## Tools
 
 |          |         |
 |----------|---------|
-| epythet  | 0.2.17  |
-| Sphinx   | 9.1.0   |
+| epythet  | 0.2.25  |
+| Sphinx   | 9.1.1   |
 | docutils | 0.22.4  |
-| Python   | 3.12.15 |
+| Python   | 3.12.16 |
 
 ## Configuration as resolved
 
@@ -1011,14 +1011,14 @@ The documentation and the package may be misaligned:
 
 ## Package on PyPI
 
-Latest release: <a href="https://pypi.org/project/pricewright/0.0.2/">0.0.2</a>, newer than the documented version (0.0.1).
+Latest release: <a href="https://pypi.org/project/pricewright/0.0.3/">0.0.3</a>, newer than the documented version (0.0.2).
 
 ## Reproduce
 
 ```bash
 git clone https://github.com/thorwhalen/pricewright && cd pricewright
-git checkout ffd5c6a07fb374bd3da329986b29c8d4ce812d4e
-pip install "epythet==0.2.17"
+git checkout e2c52791a32af1db738bcdcde014016263a196b4
+pip install "epythet==0.2.25"
 epythet quickstart . --ignore tests/ scrap/ examples/
 ```
 
@@ -1041,7 +1041,7 @@ Skills are folders holding a `SKILL.md` (the [Agent Skills](https://agentskills.
 
 ### `pricing-expert`
 
-Price a service or product with a real rationale: a cost-and-effort model at the core (prep and development hours per delivered hour, facilitators or crew, the provider’s day rate, credits and tools, fees, contingency, margin), travel as explicit variables, consistency checks across a whole rate card, and market comparables as a separate, swappable input. Routes by offering type to a specialty: training, talks, workshops, courses and coaching; audiovisual production (commercials, brand films, music videos, animation, documentary, explainers, pilots, retainers); software and apps (subscriptions, pay-as-you-go, credits, seats, freemium, tiers). Use for “price this”, “what should we charge”, “make a rate card”, “is this price consistent”, “day rate”, “how much for a talk / workshop / course / video”, “on-site vs online price”, “travel costs in a quote”, “per diem”, “pricing tiers”, “subscription vs usage pricing”, “credits pricing”, “check our prices against the market”. Backed by the `pricewright` Python package (calculator + CLI).
+Price a service or product with a real rationale: a cost-and-effort model at the core (prep and development hours per delivered hour, facilitators or crew, the provider’s day rate, credits and tools, fees, contingency, margin), travel as explicit variables, consistency checks across a rate card, and market comparables as a separate, swappable input. Routes by offering type to a specialty: training, talks, workshops, courses and coaching; audiovisual production (commercials, brand films, music videos, animation, documentary, explainers, pilots, retainers); software and apps (subscriptions, pay-as-you-go, credits, seats, freemium, tiers). Use for “price this”, “what should we charge”, “make a rate card”, “is this price consistent”, “day rate”, “how much for a talk / workshop / course / video”, “on-site vs online”, “travel costs in a quote”, “per diem”, “pricing tiers”, “subscription vs usage pricing”, “credits pricing”, “compare our prices to the market”. Backed by the `pricewright` package (calculator + CLI).
 
 ```bash
 gh skill install thorwhalen/pricewright pricing-expert --agent claude-code
